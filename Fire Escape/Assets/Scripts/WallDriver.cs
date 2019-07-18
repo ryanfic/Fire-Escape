@@ -51,9 +51,9 @@ public class WallDriver : MonoBehaviour
                 thewall.add(hit.point,this.transform);
 
                 
-                line.SetPosition(0,thewall.startPoint);
-                line.SetPosition(1,thewall.endPoint);
-                dir = thewall.dir;
+                line.SetPosition(0,thewall.getStartPoint());
+                line.SetPosition(1,thewall.getEndPoint());
+                dir = thewall.getDir();
             }
         }
     }

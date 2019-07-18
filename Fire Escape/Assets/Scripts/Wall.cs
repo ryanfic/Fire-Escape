@@ -17,6 +17,9 @@ public class Wall
     private float gapAllowed;
     public int numPoints;
 
+    private Wall nextWall;
+    private Wall prevWall;
+
     private int edgeResolveIterations = 2;
 
     /*
@@ -39,6 +42,8 @@ public class Wall
         gapAllowed = _gapAllowed;
         errorDist = _errorDist;
         numPoints = 2;
+        nextWall = null;
+        prevWall = null;
     }
 
     public Vector3 getStartPoint(){
@@ -56,6 +61,20 @@ public class Wall
         return dir;
     }
 
+    public Wall getNextWall(){
+        return nextWall;
+    }
+    public void setNextWall(Wall _nextWall){
+        nextWall = _nextWall;
+    }
+    public Wall getPrevWall(){
+        return prevWall;
+    }
+    public void setPrevWall(Wall _prevWall){
+        prevWall = _prevWall;
+    }
+
+
     /*
         Checks if a given point is within errorDist of the wall
         Assumes that height of point & wall does not matter
@@ -66,14 +85,12 @@ public class Wall
     public bool isAlongWall(Vector3 point){
         //if the distance from the wall vector is less than the tolerable error distance
         if(distPerpToWall(point)<errorDist){
-            //Debug.Log("Is along wall!");
             //the point is along the wall
             return true;
         }
         //if the distance from the wall vector is greater than the tolerable error distance
         else
         {
-            //Debug.Log("Is NOT along wall!");
             //the point is not along the wall
             return false;
 
@@ -153,11 +170,7 @@ public class Wall
         //pretend the point is at the same height as the yVal
         point.y = yVal;
         Vector3 fromStart = point-startPoint; //the direction from the start point to the point
-        //pretend the point is at the same height as the wall vector
-        //fromStart.y = dir.y;
         Vector3 fromEnd = point-endPoint; //the direction from the end point to the point
-        //pretend the point is at the same height as the wall vector
-        //fromEnd.y = dir.y;
 
         //if the angle between the direction of the wall and the direction from the start point to the point is greater than 90
         if(Vector3.Angle(dir,fromStart)>90){
@@ -187,8 +200,9 @@ public class Wall
         Assumes the height of the wall & point do not matter
 
         @param point the point to be added to the wall
+        @returns if the point has been added (or would be added, in the case where the point is on the wall already)
      */
-    public void add(Vector3 point, Transform observer){
+    public bool add(Vector3 point, Transform observer){
         //pretend the point is at the same height as the yVal
         point.y = yVal;
         //if the distance from the wall vector is less than the tolerable error distance
@@ -248,6 +262,7 @@ public class Wall
                     //update the midpoint
                     updateMid(point);
                     numPoints++;
+                    return true;
                 }
             }
             //if the region is greater than 0, the point is after the end of the wall line
@@ -298,11 +313,17 @@ public class Wall
                     //update the midpoint
                     updateMid(point);
                     numPoints++;
+                    return true;
                 }
                 
             }
             //cannot put the mid update and numpoints increment out here due to the case where region = 0
+            //if the point is in the middle of the wall
+            else{
+                return true;
+            }
         }
+        return false;
     }
 
     public Vector3 nextPointAlongWall(float distance, bool beforeStart){
@@ -321,6 +342,23 @@ public class Wall
         }
         return point;
 
+    }
+
+    /*
+        Gets the edge point (start point or end point) that is closer to a given point
+
+        @param point the point from which the closest point is determined
+        @returns the point which is closest to the given point
+     */
+    public Vector3 closestEdgePoint(Vector3 point){
+        Vector3 fromEnd = point-endPoint;
+        Vector3 fromStart = point-startPoint;
+        if(fromEnd.magnitude<fromStart.magnitude){
+            return endPoint;
+        }
+        else{
+            return startPoint;
+        }
     }
 
 
