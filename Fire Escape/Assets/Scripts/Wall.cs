@@ -211,13 +211,11 @@ public class Wall
             //Debug.Log("Region"+region);
             bool hitPointOnWall = true; //if a point along the wall has been hit 
             float distFromEnd = distParaFromWallEnd(point);
-
             //if the region is less than 0, the point is before the start of the wall line
             if(region<0)
             {
-
                 //while the gap between the start point is greater than the gap allowance, or the observer did not hit another point along the wall
-                while(-distFromEnd>gapAllowed&&hitPointOnWall)
+                while(Mathf.Abs(distFromEnd)>gapAllowed&&hitPointOnWall)
                 {
                     //fire a ray from the observer at the next spot
                     int shotsFired = 0;
@@ -246,14 +244,14 @@ public class Wall
                     }
                     //if a point on the wall has been hit add that point to the wall
                     if(hitPointOnWall){
-                        add(hit.point,observer);
+                        directAdd(hit.point,true);
                     }
                     //update the distance from the end
                     distFromEnd = distParaFromWallEnd(point);
                 }
                 //if, after completing the loop, you have hit something along the wall
                 if(hitPointOnWall){
-                    //update the direction
+                    /*//update the direction
                     updateDir(point-startPoint,true);
                     //update the start point
                     startPoint = point; //Vector3.Project(point,dir);
@@ -261,7 +259,8 @@ public class Wall
                     //startPoint.y = yVal;
                     //update the midpoint
                     updateMid(point);
-                    numPoints++;
+                    numPoints++;*/
+                    directAdd(point,true);
                     return true;
                 }
             }
@@ -269,13 +268,14 @@ public class Wall
             else if(region>0)
             {
                 //while the gap between the start point is greater than the gap allowance, or the observer did not hit another point along the wall
-                while(distFromEnd>gapAllowed&&hitPointOnWall)
+                while(Mathf.Abs(distFromEnd)>gapAllowed&&hitPointOnWall)
                 {
                     //fire a ray from the observer at the next spot
                     int shotsFired = 0;
                     float nextShotDist = gapAllowed-0.1f; // the distance to the next spot to shoot at (slightly smaller than the gap distance)
                     RaycastHit hit;
                     //shoot a ray from the observer to the position that is nextShotDist along the wall
+                    //Debug.DrawRay(observer.position, (nextPointAlongWall(nextShotDist,false)-observer.position)*100,Color.cyan, 10.0f);
                     if(Physics.Raycast(observer.position,nextPointAlongWall(nextShotDist,false)-observer.position,out hit, Mathf.Infinity)){
                         //if the ray hits something, check if the ray hit is along the wall
                         hitPointOnWall = isAlongWall(hit.point);
@@ -298,13 +298,13 @@ public class Wall
                     }
                     //if a point on the wall has been hit add that point to the wall
                     if(hitPointOnWall){
-                        add(hit.point,observer);
+                        directAdd(hit.point,false);
                     }
                     //update the distance from the end
                     distFromEnd = distParaFromWallEnd(point);
                 }
                 if(hitPointOnWall){
-                    //update the direction
+                    /* //update the direction
                     updateDir(point-endPoint,false);
                     //update the end point
                     endPoint = point;//Vector3.Project(point,dir);
@@ -312,7 +312,8 @@ public class Wall
                     //endPoint.y=yVal;
                     //update the midpoint
                     updateMid(point);
-                    numPoints++;
+                    numPoints++;*/
+                    directAdd(point,false);
                     return true;
                 }
                 
@@ -324,6 +325,26 @@ public class Wall
             }
         }
         return false;
+    }
+
+    private void directAdd(Vector3 point, bool beforeStart){
+        if(beforeStart){
+            //update the direction
+            updateDir(point-startPoint,beforeStart);
+            //update the start point
+            startPoint = point; //Vector3.Project(point,dir);
+        }
+        else{
+            //update the direction
+            updateDir(point-endPoint,beforeStart);
+            //update the end point
+            endPoint = point;
+        }
+        //ensure y is the same as yval
+        //startPoint.y = yVal;
+        //update the midpoint
+        updateMid(point);
+        numPoints++;
     }
 
     public Vector3 nextPointAlongWall(float distance, bool beforeStart){
