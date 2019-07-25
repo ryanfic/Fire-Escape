@@ -76,7 +76,7 @@ public class Wall
 
 
     /*
-        Checks if a given point is within errorDist of the wall
+        Checks if a given point is within errorDist of the wall (perpendicularly to the wall)
         Assumes that height of point & wall does not matter
 
         @param point the point to be checked
@@ -192,6 +192,45 @@ public class Wall
             //the point is after the end point
             return 1;
         }
+    }
+
+    /*
+        Checks if a point is on (or near) the wall
+
+        @param point the point to be checked
+        @returns if the point is on, or within gapAllowed (parallel) of the wall, while being within errorDst perpendicularly to the wall
+     */
+    public bool checkIsOnWall(Vector3 point){
+        //pretend the point is at the same height as the yVal
+        point.y = yVal;
+        //if the distance from the wall vector is less than the tolerable error distance
+        if(isAlongWall(point)){
+            float distFromEnd = distParaFromWallEnd(point);
+            //if the distFromEnd is less than 0, the point is before the start of the wall line
+            if(distFromEnd<0)
+            {
+                //if the gap between the start point is less than the gap allowance
+                if(-distFromEnd<gapAllowed)
+                {
+                    return true;
+                }
+            }
+            //if the distFromEnd is greater than 0, the point is after the end of the wall line
+            else if(distFromEnd>0)
+            {
+                //while the gap between the start point is greater than the gap allowance, or the observer did not hit another point along the wall
+                if(distFromEnd<gapAllowed)
+                {
+                    return true;
+                }                
+            }
+            //if the point is in the middle of the wall
+            else{
+                return true;
+            }
+        }
+        //if the point is not along the wall, or it failed the above tests
+        return false;
     }
     
     /*
@@ -409,6 +448,19 @@ public class Wall
     private void updateMid(Vector3 point){
         midPoint = (midPoint*numPoints+point)/(numPoints+1);
         midPoint.y=yVal;
+    }
+    public bool Equals(Wall other){
+        bool equivalent = false;
+        if(startPoint == other.getStartPoint()){
+            if(endPoint == other.getEndPoint()){
+                if(midPoint == other.getMidPoint()){
+                    if(dir == other.getDir()){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
 }
