@@ -8,7 +8,7 @@ public class FieldOfView : MonoBehaviour
     [Range(0,360)] //Clamps the value between 0 and 360
     public float viewAngle;
 
-    public LayerMask targetMask; //layer that has targets
+    public LayerMask[] targetMask; //layer that has targets
     public LayerMask obstacleMask; //layer that blocks vision
 
     [HideInInspector]//variable needs to be public because it is used in editor, but we dont want to see it in the inspector
@@ -41,7 +41,16 @@ public class FieldOfView : MonoBehaviour
     void FindVisibleTargets(){
         //remove everything we have seen before, will readd if we see again
         visibleTargets.Clear();
-        Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position,viewRadius,targetMask);
+        Collider[] targetsInViewRadius;
+        List<Collider> allTargets = new List<Collider>();
+        for(int i = 0;i<targetMask.Length;i++){
+            Collider[] objectsOnLayer = Physics.OverlapSphere(transform.position,viewRadius,targetMask[i]);
+            foreach(Collider obj in objectsOnLayer){
+                allTargets.Add(obj);
+            }
+        }
+        targetsInViewRadius = allTargets.ToArray();
+        //Physics.OverlapSphere(transform.position,viewRadius,targetMask[0]);
         
         for(int i = 0; i<targetsInViewRadius.Length;i++){
             Transform target = targetsInViewRadius[i].transform;

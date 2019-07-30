@@ -61,6 +61,10 @@ public class Wall
         return dir;
     }
 
+    public float getGapAllowed(){
+        return gapAllowed;
+    }
+
     public Wall getNextWall(){
         return nextWall;
     }
@@ -419,6 +423,62 @@ public class Wall
         else{
             return startPoint;
         }
+    }
+
+    /*
+        Check if this wall is connected to another wall. The walls are connected if the distance between the two closest wall edges are closer than the
+        shortest gapAllowed
+
+        @param otherWall the wall to be checked if this wall is close enough to
+        @returns if the walls are within the shortest gapAllowed of eachother
+     */
+    public bool areWallsConnected(Wall otherWall){
+        if(otherWall == null||this == null){
+            return false;
+        }
+        float gapDst;
+        if(gapAllowed<=otherWall.getGapAllowed()){
+            gapDst = gapAllowed;
+        }
+        else{
+            gapDst = otherWall.getGapAllowed();
+        }
+        Vector3 thisClosestEdge = closestEdgePoint(otherWall.midPoint);
+        return (wallDistance(otherWall)<=gapDst);
+    }
+
+    /*
+        Gets the distance between the two walls
+
+        @param otherWall the wall to which the distance is calculated
+
+        @returns the distance between the two walls (returns positive infinity if either wall is null)
+     */
+    public float wallDistance(Wall otherWall){
+        if(otherWall == null||this == null){
+            return float.PositiveInfinity;
+        }
+        Vector3 thisClosestEdge = closestEdgePoint(otherWall.midPoint);
+        return Vector3.Distance(thisClosestEdge,otherWall.closestEdgePoint(thisClosestEdge));
+    }
+
+    /*
+        Gets the length of the wall.
+     */
+    public float wallLength(){
+        return Vector3.Distance(startPoint,endPoint);
+    }
+
+    /*
+        Reverse the information contained in the wall. Switch the start and end points of the wall. Reverse the direction of the wall. 
+        The height of the wall (dir.y) remains the same.
+     */
+    public void reverseWall(){
+        Vector3 temp = startPoint;
+        startPoint = endPoint;
+        endPoint = temp;
+        dir.x = -dir.x;
+        dir.z = -dir.z;
     }
 
 
