@@ -576,7 +576,7 @@ public class Evacuee : MonoBehaviour
 
             }
         }
-        Debug.DrawRay(transform.position, dir*100,Color.green, updateFreq*5);
+        //Debug.DrawRay(transform.position, dir*100,Color.green, updateFreq*5);
     }
 
     /*
@@ -768,13 +768,13 @@ public class Evacuee : MonoBehaviour
                     //If the point hit is not on the wall
                     if(!onWall){
                         //update max angle
-                        Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.black, 10.0f);
+                        //Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.black, 10.0f);
                         //Debug.Log("Missed on step "+i);
                         maxAngle = angle;
                     }
                     //if we hit something along the wall
                     else{
-                        Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.yellow, 10.0f);
+                        //Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.yellow, 10.0f);
                         //Debug.Log("Hit on step " +i);
                         //Debug.Log(Vector3.Distance(hit.point,wallEdge));
                         //if(Vector3.Distance(hit.point,wallEdge)>0.5f){
@@ -786,7 +786,7 @@ public class Evacuee : MonoBehaviour
             }
             //if we did not hit anything
             else{
-                Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.black, 10.0f);
+                //Debug.DrawRay(transform.position, DirFromAngle(angle,false)*100,Color.black, 10.0f);
                 //Debug.Log("Missed on step "+i);
                 maxAngle = angle;
             }
