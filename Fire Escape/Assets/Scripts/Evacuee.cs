@@ -82,7 +82,7 @@ public class Evacuee : MonoBehaviour
 
 
     private List<GameObject> seenExits = new List<GameObject>();
-    private List<GameObject> seenSigns = new List<GameObject>();
+    private List<GameObject> seenWindows = new List<GameObject>();
 
     void Start(){
         fov = gameObject.GetComponent<FieldOfView>();
@@ -201,9 +201,9 @@ public class Evacuee : MonoBehaviour
                             movingInRightWallDir = true;
                         }
 
-                        //set up seen signs and exits
+                        //set up seen Windows and exits
                         seenExits = currentRoute.routeSeenExits;
-                        seenSigns = currentRoute.routeSeenSigns;
+                        seenWindows = currentRoute.routeSeenWindows;
 
                         //start moving
                         //figure out where to move next
@@ -450,19 +450,20 @@ public class Evacuee : MonoBehaviour
         foreach(Transform item in fov.visibleTargets)
         {   
             //Check if it is an exit
-            if(item.gameObject.layer == LayerMask.NameToLayer("Exits")){
+            if(item.gameObject.layer == LayerMask.NameToLayer("FireExit")){
                 //check if it is already seen
                 if(!seenExits.Contains(item.gameObject)){
                     //add the exit to seenExits
                     seenExits.Add(item.gameObject);
                 }
             }
-            //check if it is an exit sign
-            else if(item.gameObject.layer == LayerMask.NameToLayer("ExitSigns")){
+            
+            //check if it is an Window
+            else if(item.gameObject.layer == LayerMask.NameToLayer("Window")){
                 //check if it is already seen
-                if(!seenSigns.Contains(item.gameObject)){
+                if(!seenWindows.Contains(item.gameObject)){
                     //add the exit to seenExits
-                    seenSigns.Add(item.gameObject);
+                    seenWindows.Add(item.gameObject);
                 }
             }
         }
@@ -599,11 +600,11 @@ public class Evacuee : MonoBehaviour
             result = getClosestObject(seenExits,transform.position).transform.position;
             
         }
-        //if there are any seen signs
-        else if(seenSigns.Count>0){
-            //the next destination is the closest sign
-            Debug.Log("Destination is Sign");
-            result = getClosestObject(seenSigns,transform.position).transform.position;
+        //if there are any seen Windows
+        else if(seenWindows.Count>0){
+            //the next destination is the closest Window
+            Debug.Log("Destination is Window");
+            result = getClosestObject(seenWindows,transform.position).transform.position;
             
         }
         //otherwise
@@ -1410,8 +1411,8 @@ public class Evacuee : MonoBehaviour
                 foreach(GameObject item in leftPeek?leftGapInfo.gapSeenExits:rightGapInfo.gapSeenExits){
                     Debug.Log("Saw "+item.name+" exit!");
                 }
-                foreach(GameObject item in leftPeek?leftGapInfo.gapSeenSigns:rightGapInfo.gapSeenSigns){
-                    Debug.Log("Saw "+item.name+" sign!");
+                foreach(GameObject item in leftPeek?leftGapInfo.gapSeenWindows:rightGapInfo.gapSeenWindows){
+                    Debug.Log("Saw "+item.name+" window!");
                 }
             }
         }
@@ -1423,25 +1424,25 @@ public class Evacuee : MonoBehaviour
         //if we are peeking to the left, ensure that leftGapInfo
         //if(leftPeeking?leftGapInfo!=null:rightGapInfo!=null){
             List<GameObject> gapExitsList = leftPeeking?leftGapInfo.gapSeenExits:rightGapInfo.gapSeenExits;
-            List<GameObject> gapSignsList = leftPeeking?leftGapInfo.gapSeenSigns:rightGapInfo.gapSeenSigns;
+            List<GameObject> gapWindowsList = leftPeeking?leftGapInfo.gapSeenWindows:rightGapInfo.gapSeenWindows;
         
             //if the agent sees any exits
             foreach(Transform item in fov.visibleTargets)
             {   
                 //Check if it is an exit
-                if(item.gameObject.layer == LayerMask.NameToLayer("Exits")){
+                if(item.gameObject.layer == LayerMask.NameToLayer("FireExit")){
                     //check if it is already seen
                     if(!seenExits.Contains(item.gameObject)&&!gapExitsList.Contains(item.gameObject)){
                         //add the exit to seenExits
                         gapExitsList.Add(item.gameObject);
                     }
                 }
-                //check if it is an exit sign
-                else if(item.gameObject.layer == LayerMask.NameToLayer("ExitSigns")){
+                //check if it is an window
+                else if(item.gameObject.layer == LayerMask.NameToLayer("Window")){
                     //check if it is already seen
-                    if(!seenSigns.Contains(item.gameObject)&&!gapSignsList.Contains(item.gameObject)){
+                    if(!seenWindows.Contains(item.gameObject)&&!gapWindowsList.Contains(item.gameObject)){
                         //add the exit to seenExits
-                        gapSignsList.Add(item.gameObject);
+                        gapWindowsList.Add(item.gameObject);
                     }
                 }
             }
@@ -1455,7 +1456,7 @@ public class Evacuee : MonoBehaviour
         Vector3 startSpot;
         Vector3 leftDstCalcSpot = Vector3.positiveInfinity;
         Vector3 rightDstCalcSpot = Vector3.positiveInfinity;
-        //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenSigns, bool _chosen, int _priority)
+        //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
         Route leftRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), false, int.MinValue);
         Route rightRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), false, int.MinValue);
         Route fwdRoute;
@@ -1480,8 +1481,8 @@ public class Evacuee : MonoBehaviour
             //if the closest point is the end, the right wall is the closestWallIndex
             //if the closest point is the start, the right wall is the previous wall in the list
             
-            //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenSigns, bool _chosen, int _priority)
-            leftRoute = new Route(leftGapInfo.wallList[0], leftGapInfo.closestWallPointIsEnd?leftGapInfo.wallList[leftGapInfo.closestWallIndex]:leftGapInfo.wallList[leftGapInfo.closestWallIndex-1], startSpot, -transform.right, leftGapInfo.gapSeenExits, leftGapInfo.gapSeenSigns, false, 0);
+            //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
+            leftRoute = new Route(leftGapInfo.wallList[0], leftGapInfo.closestWallPointIsEnd?leftGapInfo.wallList[leftGapInfo.closestWallIndex]:leftGapInfo.wallList[leftGapInfo.closestWallIndex-1], startSpot, -transform.right, leftGapInfo.gapSeenExits, leftGapInfo.gapSeenWindows, false, 0);
             
             //set up the new left wall for moving forwards
             //if the closest wall point is the end point of the wall
@@ -1516,7 +1517,7 @@ public class Evacuee : MonoBehaviour
             //what is the left wall? depends on if the closest point is the start or end
             //if the closest point is the end, the left wall is the closestWallIndex
             //if the closest point is the start, the left wall is the previous wall in the list
-            rightRoute = new Route(rightGapInfo.closestWallPointIsEnd?rightGapInfo.wallList[rightGapInfo.closestWallIndex]:rightGapInfo.wallList[rightGapInfo.closestWallIndex-1], rightGapInfo.wallList[0], startSpot, transform.right, rightGapInfo.gapSeenExits, rightGapInfo.gapSeenSigns, false, 0);
+            rightRoute = new Route(rightGapInfo.closestWallPointIsEnd?rightGapInfo.wallList[rightGapInfo.closestWallIndex]:rightGapInfo.wallList[rightGapInfo.closestWallIndex-1], rightGapInfo.wallList[0], startSpot, transform.right, rightGapInfo.gapSeenExits, rightGapInfo.gapSeenWindows, false, 0);
             
             //set up the new right wall for moving forwards
             //if the closest wall point is the end point of the wall
@@ -1554,12 +1555,12 @@ public class Evacuee : MonoBehaviour
             }
         }
         //create a forward route
-        //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenSigns, bool _chosen, int _priority)
+        //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
         Vector3 fartherWall = leftPeeked?rightPeeked?(Vector3.Distance(leftGapInfo.closestWallPoint,transform.position)<Vector3.Distance(rightGapInfo.closestWallPoint,transform.position))?rightGapInfo.closestWallPoint:leftGapInfo.closestWallPoint:leftGapInfo.closestWallPoint:rightGapInfo.closestWallPoint;
 
         startSpot = Vector3.Project(fartherWall-transform.position,Vector3.Normalize(evaDir))+transform.position;
         //(Vector3.Distance(leftDstCalcSpot,transform.position)<Vector3.Distance(rightDstCalcSpot,transform.position))?leftDstCalcSpot:rightDstCalcSpot
-        fwdRoute = new Route(newLeftWall, newRightWall, startSpot, evaDir, seenExits, seenSigns, false, 0);
+        fwdRoute = new Route(newLeftWall, newRightWall, startSpot, evaDir, seenExits, seenWindows, false, 0);
 
         //if we have peeked left
         if(leftPeeked){
@@ -1673,7 +1674,7 @@ public class Evacuee : MonoBehaviour
         public Vector3 closestWallPoint; //the wall point closest to the previous wall
         public bool closestWallPointIsEnd; //if the closestWallPoint is the endpoint of the wall
         public List<GameObject> gapSeenExits;
-        public List<GameObject> gapSeenSigns;
+        public List<GameObject> gapSeenWindows;
 
 
         public GapInfo(List<Wall> _wallList,int _closestWallIndex, Vector3 _closestWallPoint ){
@@ -1682,7 +1683,7 @@ public class Evacuee : MonoBehaviour
             closestWallPoint = _closestWallPoint;
             closestWallPointIsEnd = (Vector3.Distance(wallList[closestWallIndex].getEndPoint(),closestWallPoint)<0.1f);
             gapSeenExits = new List<GameObject>();
-            gapSeenSigns = new List<GameObject>();
+            gapSeenWindows = new List<GameObject>();
         }
         public GapInfo(List<Wall> _wallList, int _closestWallIndex, bool _closestWallPointIsEnd){
             wallList = _wallList;
@@ -1690,7 +1691,7 @@ public class Evacuee : MonoBehaviour
             closestWallPointIsEnd = _closestWallPointIsEnd;
             closestWallPoint = closestWallPointIsEnd?wallList[closestWallIndex].getEndPoint():wallList[closestWallIndex].getStartPoint();
             gapSeenExits = new List<GameObject>();
-            gapSeenSigns = new List<GameObject>();
+            gapSeenWindows = new List<GameObject>();
         }
     }
 
@@ -1700,31 +1701,31 @@ public class Evacuee : MonoBehaviour
         public Vector3 startSpot; //Set to positive infinity to represent a null route
         public Vector3 routeDirection;
         public List<GameObject> routeSeenExits;
-        public List<GameObject> routeSeenSigns;
+        public List<GameObject> routeSeenWindows;
         public bool chosen;
         public int priority;
         
-        public Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenSigns, bool _chosen, int _priority){
+        public Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority){
             routeLeftWall = _leftWall;
             routeRightWall = _rightWall;
             startSpot = _startSpot;
             routeDirection = _direction;
             routeSeenExits = _routeSeenExits;
-            routeSeenSigns = _routeSeenSigns;
+            routeSeenWindows = _routeSeenWindows;
             chosen = _chosen;
             priority = _priority;
         }
         public GameObject getClosestSeenExit(Vector3 point){
             return getClosestObject(routeSeenExits,point);
         }
-        public GameObject getClosestSeenSign(Vector3 point){
-            return getClosestObject(routeSeenSigns,point);
+        public GameObject getClosestSeenWindow(Vector3 point){
+            return getClosestObject(routeSeenWindows,point);
         }
         public float closestSeenExitDst(Vector3 point){
             return Vector3.Distance(point,getClosestSeenExit(point).transform.position);
         }
-        public float closestSeenSignDst(Vector3 point){
-            return Vector3.Distance(point,getClosestSeenSign(point).transform.position);
+        public float closestSeenWindowDst(Vector3 point){
+            return Vector3.Distance(point,getClosestSeenWindow(point).transform.position);
         }
         private GameObject getClosestObject(List<GameObject> listOfObj, Vector3 point){
             GameObject closest = null;
@@ -1789,30 +1790,30 @@ public class Evacuee : MonoBehaviour
                 }
             }
 
-            //compare signs
-            //if this route has signs
-            if(routeSeenSigns.Count>0){
+            //compare Windows
+            //if this route has Windows
+            if(routeSeenWindows.Count>0){
                 //if the other route has exits
-                if(other.routeSeenSigns.Count>0){
-                    //compare the distances of the Signs
-                    float dstDiff = (closestSeenSignDst(thisDstCalcSpot)-other.closestSeenSignDst(otherDstCalcSpot))*1000;
+                if(other.routeSeenWindows.Count>0){
+                    //compare the distances of the Windows
+                    float dstDiff = (closestSeenWindowDst(thisDstCalcSpot)-other.closestSeenWindowDst(otherDstCalcSpot))*1000;
                     //if the difference is significant
                     if(Mathf.Abs(dstDiff)>1){
-                        Debug.Log("Sign " + getClosestSeenSign(thisDstCalcSpot).name + " or Sign " + other.getClosestSeenSign(otherDstCalcSpot).name +" is closer by "+dstDiff);
+                        Debug.Log("Window " + getClosestSeenWindow(thisDstCalcSpot).name + " or Window " + other.getClosestSeenWindow(otherDstCalcSpot).name +" is closer by "+dstDiff);
                         return (int)(dstDiff);
                     }
                 }
-                //if this route has an sign and the other does not, this route comes first
+                //if this route has an Window and the other does not, this route comes first
                 else{
-                    Debug.Log("Only sign " + getClosestSeenSign(thisDstCalcSpot).name);
+                    Debug.Log("Only Window " + getClosestSeenWindow(thisDstCalcSpot).name);
                     return -1;
                 }
             }
-            //if this route does not have signs
+            //if this route does not have Windows
             else{
-                //if the other route has signs
-                if(other.routeSeenSigns.Count>0){
-                    Debug.Log("Only Exit " + other.getClosestSeenSign(otherDstCalcSpot).name);
+                //if the other route has Windows
+                if(other.routeSeenWindows.Count>0){
+                    Debug.Log("Only Window " + other.getClosestSeenWindow(otherDstCalcSpot).name);
                     //this route comes second
                     return 1;
                 }

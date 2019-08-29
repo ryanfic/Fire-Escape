@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Exits
-  - Building
-  - ExitSigns
-  - Windows
+  - FireExit
+  - Wall
+  - Window
+  - ExitSign
   - Evacuee
   - Ground
   - 
