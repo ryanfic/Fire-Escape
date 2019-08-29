@@ -755,10 +755,10 @@ public class Evacuee : MonoBehaviour
             if(Physics.Raycast(transform.position,DirFromAngle(angle,false),out hit,sensorRadius,wallMask)){
                 //if(false){}
                 //if the hit point is closer than the wall edge to the agent, the wall juts out towards the agent, there is no gap
-                Debug.Log("Hit Square " + Mathf.Pow(Vector3.Distance(hit.point,transform.position),2));
+                /* Debug.Log("Hit Square " + Mathf.Pow(Vector3.Distance(hit.point,transform.position),2));
                 Debug.Log("Fwd Square " + Mathf.Pow(Vector3.Distance(fwdhit.point,transform.position),2));
                 Debug.Log("Hit-Fwd Square " + (Mathf.Pow(Vector3.Distance(hit.point,transform.position),2)-Mathf.Pow(Vector3.Distance(fwdhit.point,transform.position),2)));
-                Debug.Log("Dst Square " +Mathf.Pow(Vector3.Distance(hit.point,fwdhit.point),2));
+                Debug.Log("Dst Square " +Mathf.Pow(Vector3.Distance(hit.point,fwdhit.point),2));*/
                 if(Mathf.Abs(Mathf.Pow(Vector3.Distance(hit.point,transform.position),2)-Mathf.Pow(Vector3.Distance(fwdhit.point,transform.position),2)-Mathf.Pow(Vector3.Distance(hit.point,fwdhit.point),2))<30f){
                     Debug.Log("There is a forward wall here!");
                     return false;
@@ -1758,6 +1758,7 @@ public class Evacuee : MonoBehaviour
 
          */
         public int compareTo(Route other,Vector3 thisDstCalcSpot, Vector3 otherDstCalcSpot, Vector3 agentDir){
+            Debug.Log("COMPARING");
             //compare exits
             //if this route has exits
             if(routeSeenExits.Count>0){
