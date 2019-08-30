@@ -9,18 +9,19 @@ public class Evacuee : MonoBehaviour
     public GameObject footprintPrefab;
 
     public FieldOfView fov;
+    private SimulationObjectLists objLists;
 
-    public float sensorAngle;
-    public float sensorRadius;
+    public float sensorAngle = 45f;
+    public float sensorRadius = 150f;
     public bool familiar = false; //is the agent familiar to the building
 
     public bool leftSensorTripped; //if a gap has been detected on the left side of the agent
     public bool rightSensorTripped; //if a gap has been detected on the right side of the agent
 
-    public int edgeResolveIterations;
-    public int gapResolveIterations;
+    public int edgeResolveIterations = 6;
+    public int gapResolveIterations = 5;
 
-    public float gapScanDegrees; //fidelity of the scan for walls in a gap
+    public float gapScanDegrees = 0.5f; //fidelity of the scan for walls in a gap
 
     public LayerMask wallMask;
 
@@ -31,11 +32,11 @@ public class Evacuee : MonoBehaviour
     public LineRenderer rightWallLine;
     public LineRenderer leftWallLine;
 
-    public float wallYVal;
-    public float wallErrorDst;
+    public float wallYVal = 1.5f;
+    public float wallErrorDst = 0.4f;
 
     private NavMeshAgent agent;
-    public Transform Target;
+    public Transform Target = null;
     private List<Vector3> destinations;
     private Vector3 evaDir; //the direction of the agent
     public int leftScanLoc; //the index in the destinations list for the spot where the agent will do a left hand scan
@@ -72,10 +73,10 @@ public class Evacuee : MonoBehaviour
     }
     public EvacueeMovementState curMoveState = EvacueeMovementState.wandering;
 
-    public float updateFreq;
+    public float updateFreq = 0.2f;
     private float timer;
 
-    public float footprintFreq;
+    public float footprintFreq = 0.5f;
     private float footprintTimer;
 
 
@@ -84,24 +85,27 @@ public class Evacuee : MonoBehaviour
     private List<GameObject> seenExits = new List<GameObject>();
     private List<GameObject> seenWindows = new List<GameObject>();
 
-    void Start(){
+    void Awake(){
         fov = gameObject.GetComponent<FieldOfView>();
         agent = gameObject.GetComponent<NavMeshAgent>();
+        wallMask = LayerMask.GetMask("Wall");
+        leftWallLine = gameObject.transform.GetChild(2).GetComponent<LineRenderer>();
+        rightWallLine = gameObject.transform.GetChild(1).GetComponent<LineRenderer>();
         //agent.SetDestination(Target.position);
-        if(familiar){
-             GameObject closestExit = getBuildingClosestExit();
-            if(closestExit != null){
-                move(closestExit.transform.position);
-            }
-            //move(Target.position);
-        }
-        else{
-            SetUp();
-            move(Target.position);
-        }
+        
         destinations = new List<Vector3>();
-        destinations.Add(Target.position);
-        evaDir = Target.position - transform.position;
+        if(Target != null)
+        {
+            destinations.Add(Target.position);
+            evaDir = Target.position - transform.position;
+
+        }
+        else
+        {
+            Vector3 nextDest = gameObject.transform.position+gameObject.transform.forward*5;
+            destinations.Add(nextDest);
+            evaDir = nextDest - transform.position;
+        }
         timer = updateFreq;
         leftSensorTripped = false;
         rightSensorTripped = false;
@@ -117,7 +121,34 @@ public class Evacuee : MonoBehaviour
         initializationTime = Time.timeSinceLevelLoad;
         footprintTimer = footprintFreq;
     }
-
+    void OnEnable()
+    {
+        if(familiar){
+             GameObject closestExit = getBuildingClosestExit();
+            if(closestExit != null){
+                move(closestExit.transform.position);
+            }
+            //move(Target.position);
+        }
+        else{
+            SetUp();
+            updateSeenObjects();
+            if(Target != null)
+            {
+                move(Target.position);
+            }
+            else
+            {
+                if(seenExits.Count>0)
+                {
+                    move(seenExits[1].transform.position);
+                }
+                else{
+                    move(gameObject.transform.position+gameObject.transform.forward*100);
+                }
+            }
+        }
+    }
     void LateUpdate(){
         if(!familiar){
             if(leftPeeking){
@@ -377,8 +408,16 @@ public class Evacuee : MonoBehaviour
             footprintTimer = 0;
             GameObject footprint = Instantiate(footprintPrefab) as GameObject;
             footprint.transform.position = transform.position;
+            if(objLists != null)
+            {
+                objLists.addFootprint(footprint);
+            }
         }
         
+    }
+    public void addSimObjList(SimulationObjectLists _simObjLists)
+    {
+        objLists = _simObjLists;
     }
 
     public float getInitTime(){
@@ -1536,7 +1575,7 @@ public class Evacuee : MonoBehaviour
             //if the closest wall point is the start point of the wall
             else{
                 //make the new right wall the closest wall
-                 newRightWall = leftGapInfo.wallList[leftGapInfo.closestWallIndex];
+                 newRightWall = rightGapInfo.wallList[rightGapInfo.closestWallIndex];
             }
         }
 
@@ -1870,5 +1909,5 @@ public class Evacuee : MonoBehaviour
             nextRoute = _nextRoute;
         }
     }
-
+    
 }

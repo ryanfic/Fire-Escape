@@ -9,6 +9,7 @@ public class SimulationObjectLists : MonoBehaviour
     private List<GameObject> fireExitList = new List<GameObject>();
     private List<GameObject> windowList = new List<GameObject>();
     private List<GameObject> wallList = new List<GameObject>();
+    private List<GameObject> footprintList = new List<GameObject>();
 
     /* void Update()
     {
@@ -51,6 +52,10 @@ public class SimulationObjectLists : MonoBehaviour
     {
       return wallList;  
     }
+    public List<GameObject> getFootprintList()
+    {
+        return footprintList;
+    }
     public void addEvacuee(GameObject evacuee)
     {
         //check if the object to add is an evacuee by seeing if the evacuee is on the evacuee layer
@@ -72,6 +77,10 @@ public class SimulationObjectLists : MonoBehaviour
                 evacueeList.Remove(evacuee);
             }
         }
+    }
+    public void clearEvacueeList()
+    {
+        evacueeList = new List<GameObject>();
     }
     public void addFireExit(GameObject fireExit)
     {
@@ -95,6 +104,10 @@ public class SimulationObjectLists : MonoBehaviour
             }
         }
     }
+    public void clearFireExitList()
+    {
+        fireExitList = new List<GameObject>();
+    }
     public void addWindow(GameObject window)
     {
         //check if the object to add is a window by seeing if the object is on the window layer
@@ -117,6 +130,10 @@ public class SimulationObjectLists : MonoBehaviour
             }
         }
     }
+    public void clearWindowList()
+    {
+        windowList = new List<GameObject>();
+    }
     public void addWall(GameObject wall)
     {
         //check if the object to add is a wall by seeing if the object is on the wall layer
@@ -138,5 +155,36 @@ public class SimulationObjectLists : MonoBehaviour
                 wallList.Remove(wall);
             }
         }
+    }
+    public void clearWallList()
+    {
+        wallList = new List<GameObject>();
+    }
+    public void addFootprint(GameObject footprint)
+    {
+        //check if the object to add is a footprint by seeing if the object is on the footprint layer
+        if(footprint.layer == LayerMask.NameToLayer("Footprint"))
+        {
+            //if the object is on the footprint layer, add the object to the footprint list
+            footprintList.Add(footprint);
+        }
+    }
+    public void removeFootprint(GameObject footprint)
+    {
+        //check if the object to remove is a footprint by seeing if the object is on the footprint layer
+        if(footprint.layer == LayerMask.NameToLayer("Footprint"))
+        {
+            //if the object is on the footprint layer, check if the object is on the footprint list
+            if(footprintList.Contains(footprint))
+            {
+                //if the footprint is on the list, remove the footprint
+                footprintList.Remove(footprint);
+            }
+        }
+    }
+
+    public void clearFootprintList()
+    {
+        footprintList = new List<GameObject>();
     }
 }
