@@ -39,7 +39,7 @@ public class FieldOfView : MonoBehaviour
         }
     }
     void FindVisibleTargets(){
-        //remove everything we have seen before, will readd if we see again
+        //remove everything we have seen before, will read if we see again
         visibleTargets.Clear();
         Collider[] targetsInViewRadius;
         List<Collider> allTargets = new List<Collider>();

@@ -45,37 +45,6 @@ public class UiController : MonoBehaviour
             toolsByName.Add(tempTool.Name,tempTool);
         }
         selectedTool = "";
-        //Debug.Log("Type: " + LayerMask.LayerToName(_objType.value));
-        /* try{
-            ((WallBuilderTool)toolsByName["WallBuilder"]).switchCamera(cam);
-        }
-        catch (KeyNotFoundException){
-            Debug.Log("Wall Builder not found.");
-        }
-        try{
-            ((EvacueeFactoryTool)toolsByName["EvacueeFactory"]).switchCamera(cam);
-        }
-        catch (KeyNotFoundException){
-            Debug.Log("Evacuee Factory not found.");
-        }
-        try{
-            ((FireExitFactoryTool)toolsByName["FireExitFactory"]).switchCamera(cam);
-        }
-        catch (KeyNotFoundException){
-            Debug.Log("Fire Exit Factory not found.");
-        }
-        try{
-            ((WindowFactoryTool)toolsByName["WindowFactory"]).switchCamera(cam);
-        }
-        catch (KeyNotFoundException){
-            Debug.Log("Window Factory not found.");
-        }*/
-
-        /* foreach(KeyValuePair<string,Tool> entry in toolsByName)
-        {
-            
-            Debug.Log("Tool: " + entry.Value.Name);
-        }*/
     }
 
     
