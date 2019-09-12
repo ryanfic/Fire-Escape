@@ -52,18 +52,17 @@ public abstract class EvacuationObjectFactoryTool : Tool
                 }
                 //Debug.Log("Spawn point: " + evacuationObjectSpawnPoint);
             }
-            //if there was something where you tried to spawn an object
-            else if(objectAtSpawnPoint)
+        }
+        //if there was something where you tried to spawn an object
+        if(objectAtSpawnPoint)
+        {
+            if(Input.GetMouseButtonUp(0))
             {
-                if(Input.GetMouseButtonUp(0))
-                {
-                    objectAtSpawnPoint = false;
-                }
+                objectAtSpawnPoint = false;
             }
         }
-        
         //if there was nothing at the spawn point, and the mouse is still held down
-        if(Input.GetMouseButton(0)){
+        else if(Input.GetMouseButton(0)){
             if(!evacuationObjectSpawnPoint.HasValue){
                 return;
             }
@@ -167,6 +166,7 @@ public abstract class EvacuationObjectFactoryTool : Tool
         
         newEvacuationObject = Instantiate(evacuationObjectPrefab,evacPosition,evacRotation);
         setObjectInfo();
+        evacuationObjectSpawnPoint = null;
         //WallFactory.Instance.createWall(wallLength,wallPosition,wallRotation);
     }
     public void createObject(Vector3 position, Quaternion rotation)
