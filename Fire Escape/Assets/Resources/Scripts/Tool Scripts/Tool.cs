@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class Tool : MonoBehaviour
 {
@@ -9,12 +10,14 @@ public abstract class Tool : MonoBehaviour
     protected Camera cam;
     protected LayerMask targetLayer;
     public float depth = 10;
+    //protected bool isMouseOverUI = false;
     protected SimulationObjectLists objLists;
 
     protected void Awake() 
     {
         targetLayer = LayerMask.GetMask("Ground");
     }
+
 
     protected Vector3 GetMouseCameraPoint(){
         //if there is a target layer
@@ -53,4 +56,9 @@ public abstract class Tool : MonoBehaviour
     {
         objLists = _objLists;
     }
+
+    /*public void SetIsMouseOverUI(bool _isMouseOverUI)
+    {
+        isMouseOverUI = _isMouseOverUI;
+    }*/
 }

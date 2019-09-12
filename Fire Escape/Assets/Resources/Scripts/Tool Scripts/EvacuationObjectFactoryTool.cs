@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public abstract class EvacuationObjectFactoryTool : Tool
 {
@@ -10,6 +11,8 @@ public abstract class EvacuationObjectFactoryTool : Tool
     protected float evacuationObjectArrowHeight = 0.5f;
     protected GameObject evacuationObjectPrefab;
     protected float evacuationObjectHeight;
+
+    private bool objectAtSpawnPoint = false;
 
 
 
@@ -31,17 +34,43 @@ public abstract class EvacuationObjectFactoryTool : Tool
     // Update is called once per frame
     public void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            evacuationObjectSpawnPoint = GetMouseCameraPoint();
-            //Debug.Log("Spawn point: " + evacuationObjectSpawnPoint);
+        //if the mouse is not over UI
+        if(!(EventSystem.current.IsPointerOverGameObject()))
+        {
+            //if the user clicks
+            if(Input.GetMouseButtonDown(0)){
+                Vector3 location = GetMouseCameraPoint();
+                location.y += evacuationObjectHeight;
+                if(isObjectAtLocation(location))
+                {
+                    //if there is something at the location
+                    objectAtSpawnPoint = true;
+                }
+                else
+                {
+                    evacuationObjectSpawnPoint = location;
+                }
+                //Debug.Log("Spawn point: " + evacuationObjectSpawnPoint);
+            }
+            //if there was something where you tried to spawn an object
+            else if(objectAtSpawnPoint)
+            {
+                if(Input.GetMouseButtonUp(0))
+                {
+                    objectAtSpawnPoint = false;
+                }
+            }
         }
-        else if(Input.GetMouseButton(0)){
+        
+        //if there was nothing at the spawn point, and the mouse is still held down
+        if(Input.GetMouseButton(0)){
             if(!evacuationObjectSpawnPoint.HasValue){
                 return;
             }
             drawArrow();
 
         }
+        //if there was nothing at the spawn point, and the mouse was just released
         else if(Input.GetMouseButtonUp(0)){
             if(!evacuationObjectSpawnPoint.HasValue){
                 return;
@@ -52,6 +81,8 @@ public abstract class EvacuationObjectFactoryTool : Tool
             evacuationObjectSpawnPoint = null;
         }
     }
+
+        
     void OnDisable() 
     {
         removeInProgressDirection();
@@ -121,7 +152,7 @@ public abstract class EvacuationObjectFactoryTool : Tool
         Vector3? evacDirEndPoint = GetMouseCameraPoint();
         //float wallLength = Vector3.Distance(lineStartPoint.Value,lineEndPoint.Value);
         Vector3 evacPosition = evacuationObjectSpawnPoint.Value;
-        evacPosition.y += evacuationObjectHeight;
+        //evacPosition.y += evacuationObjectHeight;
         //increase the y so that the evacuee spawns above the ground
         //evacPosition.y += 0.5f;
         Vector3 evacDir = evacDirEndPoint.Value - evacuationObjectSpawnPoint.Value;
@@ -147,9 +178,26 @@ public abstract class EvacuationObjectFactoryTool : Tool
     protected abstract void setObjectInfo();
 
 
-
+    private bool isObjectAtLocation(Vector3 location)
+    {
+        float radius = 0.25f;
+        return Physics.CheckSphere(location, radius);
+        /*//found something
+        if(Physics.CheckSphere(location, radius))
+        {
+            //Debug.Log ("Something is already here "+location+"!");
+            return true;
+        }
+        //nothing found
+        else
+        {
+            //Debug.Log("Nothing at "+location);
+            return false;
+        }*/
+    }
     private void removeInProgressDirection(){
         Destroy(evacuationObjectArrow);
         evacuationObjectArrow = null;
     }
+
 }

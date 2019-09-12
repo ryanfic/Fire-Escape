@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WallBuilderTool : Tool
 {
@@ -25,12 +26,16 @@ public class WallBuilderTool : Tool
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            Vector3 point = GetMouseCameraPoint();
-            point.y += verticalOffset;
-            lineStartPoint = point;
+        //if the mouse is not over UI
+        if(!(EventSystem.current.IsPointerOverGameObject()))
+        {
+            if(Input.GetMouseButtonDown(0)){
+                Vector3 point = GetMouseCameraPoint();
+                point.y += verticalOffset;
+                lineStartPoint = point;
+            }
         }
-        else if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(0)){
             if(!lineStartPoint.HasValue){
                 return;
             }
