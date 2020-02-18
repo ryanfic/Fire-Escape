@@ -261,6 +261,10 @@ public class UiController : MonoBehaviour
         
         
     }
+
+    public void Quit(){
+        Application.Quit();
+    }
     /*public void setIsMouseOverUI(bool _isMouseOverUi)
     {
         isMouseOverUi = _isMouseOverUi;

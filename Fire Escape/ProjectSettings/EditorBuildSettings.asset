@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/_Scenes/Fire Escape Start Screen.unity
+    guid: 8ff3a2a796752f447998ebcec3d0582a
+  - enabled: 1
     path: Assets/_Scenes/Fire Escape Builder.unity
     guid: fa1fd872799c74545a144257280154d2
   - enabled: 0
