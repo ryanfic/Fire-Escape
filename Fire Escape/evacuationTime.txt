@@ -1,1 +1,1 @@
-Time to reach exit: 54.44
+Time to reach exit: 11.41079

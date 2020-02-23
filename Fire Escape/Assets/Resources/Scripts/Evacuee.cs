@@ -102,6 +102,7 @@ public class Evacuee : MonoBehaviour
         }
         else
         {
+
             Vector3 nextDest = gameObject.transform.position+gameObject.transform.forward*5;
             destinations.Add(nextDest);
             evaDir = nextDest - transform.position;
