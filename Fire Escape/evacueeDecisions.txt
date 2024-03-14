@@ -1,0 +1,150 @@
+Comparing Right Route (4.0, 1.5, 4.5) Forward Route (0.0, 0.6, 9.0)
+Route (0.0, 0.6, 9.0) is higher priority than Route (4.0, 1.5, 4.5) because the first route is more straight than the second
+The highest priority Route is (0.0, 0.6, 9.0)
+
+
+Comparing Right Route (4.0, 1.5, 28.5) Forward Route (0.0, 1.1, 33.1)
+Route (0.0, 1.1, 33.1) is higher priority than Route (4.0, 1.5, 28.5) because the first route is more straight than the second
+The highest priority Route is (0.0, 1.1, 33.1)
+
+
+Comparing Left Route (-2.1, 1.5, 39.0) Right Route (2.1, 1.5, 39.0)
+Route (-2.1, 1.5, 39.0) is higher priority than Route (2.1, 1.5, 39.0) because the first route is the only route with a window
+The highest priority Route is (-2.1, 1.5, 39.0)
+
+
+Comparing Right Route (-16.6, 1.5, 43.1) Forward Route (-20.7, 1.1, 39.6)
+Route (-20.7, 1.1, 39.6) is higher priority than Route (-16.6, 1.5, 43.1) because the first route is the only route with a window
+The highest priority Route is (-20.7, 1.1, 39.6)
+
+
+Comparing Left Route (-41.6, 1.5, 34.9) Right Route (-30.0, 1.5, 59.4) Forward Route (-45.7, 1.1, 40.5)
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-41.6, 1.5, 34.9) because the first route is the only route with a window
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-30.0, 1.5, 59.4) because the first route is the only route with a window
+Route (-30.0, 1.5, 59.4) is higher priority than Route (-41.6, 1.5, 34.9) because it was a random decision
+The highest priority Route is (-45.7, 1.1, 40.5)
+
+
+Comparing Left Route (-83.1, 1.5, 34.9) Right Route (-91.3, 1.5, 41.9) Forward Route (-79.4, 1.1, 40.5)
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-79.4, 1.1, 40.5) because is the only route with an exit
+Route (-79.4, 1.1, 40.5) is higher priority than Route (-91.3, 1.5, 41.9) because the first route is the only route with a window
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-91.3, 1.5, 41.9) because is the only route with an exit
+The highest priority Route is (-83.1, 1.5, 34.9)
+
+
+Comparing Left Route (-2.0, 1.5, 5.0) Right Route (2.1, 1.5, 5.0)
+Route (2.1, 1.5, 5.0) is higher priority than Route (-2.0, 1.5, 5.0) because it was a random decision
+The highest priority Route is (2.1, 1.5, 5.0)
+
+
+Comparing Left Route (-2.1, 1.5, 5.0) Right Route (2.0, 1.5, 5.0)
+Route (-2.1, 1.5, 5.0) is higher priority than Route (2.0, 1.5, 5.0) because the first route is shorter than the second
+The highest priority Route is (-2.1, 1.5, 5.0)
+
+
+Comparing Left Route (-31.5, 1.5, 3.5) Right Route (-31.5, 1.5, 7.0)
+Route (-31.5, 1.5, 3.5) is higher priority than Route (-31.5, 1.5, 7.0) because it was a random decision
+The highest priority Route is (-31.5, 1.5, 3.5)
+
+
+Comparing Left Route (-2.0, 1.5, 5.0) Right Route (2.0, 1.5, 5.0)
+Route (2.0, 1.5, 5.0) is higher priority than Route (-2.0, 1.5, 5.0) because it was a random decision
+The highest priority Route is (2.0, 1.5, 5.0)
+
+
+Comparing Left Route (-2.2, 1.5, 5.0) Right Route (2.0, 1.5, 5.0)
+Route (-2.2, 1.5, 5.0) is higher priority than Route (2.0, 1.5, 5.0) because the first route is shorter than the second
+The highest priority Route is (-2.2, 1.5, 5.0)
+
+
+Comparing Left Route (-31.5, 1.5, 2.9) Right Route (-31.5, 1.5, 7.0)
+Route (-31.5, 1.5, 7.0) is higher priority than Route (-31.5, 1.5, 2.9) because the first route is shorter than the second
+The highest priority Route is (-31.5, 1.5, 7.0)
+
+
+Comparing Right Route (-58.9, 1.5, 43.4) Forward Route (-59.0, 1.1, 36.5)
+Route (-59.0, 1.1, 36.5) is higher priority than Route (-58.9, 1.5, 43.4) because the first route is more straight than the second
+The highest priority Route is (-59.0, 1.1, 36.5)
+
+
+Comparing Right Route (-63.5, 1.5, 56.3) Forward Route (-67.1, 1.1, 36.5)
+Route (-63.5, 1.5, 56.3) is higher priority than Route (-67.1, 1.1, 36.5) because the first route is more straight than the second
+The highest priority Route is (-63.5, 1.5, 56.3)
+
+
+Comparing Left Route (-2.0, 1.5, 5.0) Right Route (2.0, 1.5, 5.0)
+Route (-2.0, 1.5, 5.0) is higher priority than Route (2.0, 1.5, 5.0) because it was a random decision
+The highest priority Route is (-2.0, 1.5, 5.0)
+
+
+Comparing Left Route (-31.5, 1.5, 2.8) Right Route (-31.5, 1.5, 7.1)
+Route (-31.5, 1.5, 2.8) is higher priority than Route (-31.5, 1.5, 7.1) because it was a random decision
+The highest priority Route is (-31.5, 1.5, 2.8)
+
+
+Comparing Left Route (-2.0, 1.5, 5.0) Right Route (2.0, 1.5, 5.0)
+Route (2.0, 1.5, 5.0) is higher priority than Route (-2.0, 1.5, 5.0) because it was a random decision
+The highest priority Route is (2.0, 1.5, 5.0)
+
+
+Comparing Left Route (-2.1, 1.5, 5.0) Right Route (2.1, 1.5, 5.0)
+Route (-2.1, 1.5, 5.0) is higher priority than Route (2.1, 1.5, 5.0) because it was a random decision
+The highest priority Route is (-2.1, 1.5, 5.0)
+
+
+Comparing Left Route (-31.5, 1.5, 2.9) Right Route (-31.5, 1.5, 7.4)
+Route (-31.5, 1.5, 2.9) is higher priority than Route (-31.5, 1.5, 7.4) because it was a random decision
+The highest priority Route is (-31.5, 1.5, 2.9)
+
+
+Comparing Right Route (4.1, 1.5, 4.6) Forward Route (0.0, 0.6, 9.1)
+Route (0.0, 0.6, 9.1) is higher priority than Route (4.1, 1.5, 4.6) because the first route is more straight than the second
+The highest priority Route is (0.0, 0.6, 9.1)
+
+
+Comparing Right Route (4.1, 1.5, 28.6) Forward Route (0.0, 1.1, 33.1)
+Route (0.0, 1.1, 33.1) is higher priority than Route (4.1, 1.5, 28.6) because the first route is more straight than the second
+The highest priority Route is (0.0, 1.1, 33.1)
+
+
+Comparing Left Route (-24.8, 1.5, 34.8) Right Route (2.1, 1.5, 39.0) Forward Route (0.0, 1.1, 42.8)
+Route (-24.8, 1.5, 34.8) is higher priority than Route (0.0, 1.1, 42.8) because the first route is the only route with a window
+Route (0.0, 1.1, 42.8) is higher priority than Route (2.1, 1.5, 39.0) because the first route is more straight than the second
+Route (-24.8, 1.5, 34.8) is higher priority than Route (2.1, 1.5, 39.0) because the first route is the only route with a window
+The highest priority Route is (-24.8, 1.5, 34.8)
+
+
+Comparing Right Route (4.1, 1.5, 4.6) Forward Route (0.0, 0.6, 9.1)
+Route (0.0, 0.6, 9.1) is higher priority than Route (4.1, 1.5, 4.6) because the first route is more straight than the second
+The highest priority Route is (0.0, 0.6, 9.1)
+
+
+Comparing Right Route (4.0, 1.5, 28.6) Forward Route (0.0, 1.1, 33.1)
+Route (0.0, 1.1, 33.1) is higher priority than Route (4.0, 1.5, 28.6) because the first route is more straight than the second
+The highest priority Route is (0.0, 1.1, 33.1)
+
+
+Comparing Left Route (-2.1, 1.5, 39.0) Right Route (2.1, 1.5, 39.0)
+Route (-2.1, 1.5, 39.0) is higher priority than Route (2.1, 1.5, 39.0) because the first route is the only route with a window
+The highest priority Route is (-2.1, 1.5, 39.0)
+
+
+Comparing Right Route (-16.6, 1.5, 43.1) Forward Route (-20.7, 1.1, 39.6)
+Route (-20.7, 1.1, 39.6) is higher priority than Route (-16.6, 1.5, 43.1) because the first route is the only route with a window
+The highest priority Route is (-20.7, 1.1, 39.6)
+
+
+Comparing Left Route (-41.6, 1.5, 34.9) Right Route (-30.0, 1.5, 59.2) Forward Route (-45.7, 1.1, 40.5)
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-41.6, 1.5, 34.9) because the first route is the only route with a window
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-30.0, 1.5, 59.2) because the first route is the only route with a window
+Route (-30.0, 1.5, 59.2) is higher priority than Route (-41.6, 1.5, 34.9) because it was a random decision
+The highest priority Route is (-45.7, 1.1, 40.5)
+
+
+Comparing Left Route (-83.1, 1.5, 34.9) Right Route (-91.3, 1.5, 41.9) Forward Route (-103.5, 1.1, 40.5)
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-103.5, 1.1, 40.5) because is the only route with an exit
+Route (-103.5, 1.1, 40.5) is higher priority than Route (-91.3, 1.5, 41.9) because the first route is the only route with a window
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-91.3, 1.5, 41.9) because is the only route with an exit
+The highest priority Route is (-83.1, 1.5, 34.9)
+
+

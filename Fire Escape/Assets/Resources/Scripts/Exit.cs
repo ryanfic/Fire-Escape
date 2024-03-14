@@ -7,10 +7,11 @@ public class Exit : MonoBehaviour
 {
     private string file = "evacuationTime.txt";
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("EXIT REACHED AT " + Time.timeSinceLevelLoad);
-        Debug.Log("Time taken to reach exit: " +(Time.timeSinceLevelLoad - other.gameObject.GetComponent<Evacuee>().getInitTime()));
-        WriteTime(file,(Time.timeSinceLevelLoad - other.gameObject.GetComponent<Evacuee>().getInitTime()));
+        
         if(other.gameObject.layer==LayerMask.NameToLayer("Evacuee")){
+            Debug.Log("EXIT REACHED AT " + Time.timeSinceLevelLoad);
+            Debug.Log("Time taken to reach exit: " + (Time.timeSinceLevelLoad - other.gameObject.GetComponent<Evacuee>().getInitTime()));
+            WriteTime(file, (Time.timeSinceLevelLoad - other.gameObject.GetComponent<Evacuee>().getInitTime()));
             Destroy(other.gameObject);
         }
         

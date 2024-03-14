@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Runtime.InteropServices;
 
 public class Evacuee : MonoBehaviour
 {   
     public GameObject lineHolderPrefab;
     public GameObject footprintPrefab;
+    public GameObject destinationMarkerPrefab;
+    public GameObject rayHitMarkerPrefab;
+    public GameObject leftRightWallMarkerPrefab;
 
     public FieldOfView fov;
     private SimulationObjectLists objLists;
@@ -33,7 +37,7 @@ public class Evacuee : MonoBehaviour
     public LineRenderer leftWallLine;
 
     public float wallYVal = 1.5f;
-    public float wallErrorDst = 0.4f;
+    public float wallErrorDst = 0.2f;
 
     private NavMeshAgent agent;
     public Transform Target = null;
@@ -61,6 +65,8 @@ public class Evacuee : MonoBehaviour
 
     public float peekRotation;
 
+    public float forwardWallDetectionAngle = 10;
+
     private Route currentRoute; //startSpot == positive infinity means no route stored
     private RouteSelectSpot prevSelectionSpot;
 
@@ -79,11 +85,15 @@ public class Evacuee : MonoBehaviour
     public float footprintFreq = 0.5f;
     private float footprintTimer;
 
+    private bool visualizeRays = false;
+    private bool visualizeRayHit = false;
 
+    private static string decisionFileName = "evacueeDecisions.txt";
 
 
     private List<GameObject> seenExits = new List<GameObject>();
     private List<GameObject> seenWindows = new List<GameObject>();
+    private List<GameObject> seenFires = new List<GameObject>();
 
     void Awake(){
         fov = gameObject.GetComponent<FieldOfView>();
@@ -97,6 +107,7 @@ public class Evacuee : MonoBehaviour
         if(Target != null)
         {
             destinations.Add(Target.position);
+            addDestinationMarker(Target.position);
             evaDir = Target.position - transform.position;
 
         }
@@ -105,6 +116,7 @@ public class Evacuee : MonoBehaviour
 
             Vector3 nextDest = gameObject.transform.position+gameObject.transform.forward*5;
             destinations.Add(nextDest);
+            addDestinationMarker(nextDest);
             evaDir = nextDest - transform.position;
         }
         timer = updateFreq;
@@ -142,6 +154,7 @@ public class Evacuee : MonoBehaviour
             {
                 if(seenExits.Count>0)
                 {
+                    Debug.Log("Exit seen, how many? " + seenExits.Count);
                     move(seenExits[1].transform.position);
                 }
                 else{
@@ -236,9 +249,10 @@ public class Evacuee : MonoBehaviour
                         //set up seen Windows and exits
                         seenExits = currentRoute.routeSeenExits;
                         seenWindows = currentRoute.routeSeenWindows;
+                        seenFires = currentRoute.routeSeenFires;
 
-                        //start moving
-                        //figure out where to move next
+                            //start moving
+                            //figure out where to move next
                         destinations[destinations.Count-1] = findNextDestination();
                         Debug.Log("Next location.... " + destinations[destinations.Count-1]);
                         move(destinations[destinations.Count-1]);
@@ -421,6 +435,17 @@ public class Evacuee : MonoBehaviour
         objLists = _simObjLists;
     }
 
+    private void addDestinationMarker(Vector3 destinationLocation)
+    {
+        GameObject destinationMarker = Instantiate(destinationMarkerPrefab) as GameObject;
+        Debug.Log("Placing a destination marker at: " + destinationLocation);
+        destinationMarker.transform.position = destinationLocation;
+        if (objLists != null)
+        {
+            objLists.addDestinationMarker(destinationMarker);
+        }
+    }
+
     public float getInitTime(){
         return initializationTime;
     }
@@ -444,6 +469,7 @@ public class Evacuee : MonoBehaviour
         Vector3[] points = new Vector3[2];
         points[0].y = -100;
         points[1].y = -100;
+
         /* Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left)*100,Color.red, 10.0f);
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left+ new Vector3(0,0,0.1f))*100,Color.blue, 10.0f);*/
         if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.left),out hit,sensorRadius,wallMask)){
@@ -502,8 +528,18 @@ public class Evacuee : MonoBehaviour
             else if(item.gameObject.layer == LayerMask.NameToLayer("Window")){
                 //check if it is already seen
                 if(!seenWindows.Contains(item.gameObject)){
-                    //add the exit to seenExits
+                    //add the window to seenWindows
                     seenWindows.Add(item.gameObject);
+                }
+            }
+            //check if it is a fire
+            else if (item.gameObject.layer == LayerMask.NameToLayer("Fire"))
+            {
+                //check if it is already seen
+                if (!seenFires.Contains(item.gameObject))
+                {
+                    //add the fire to seenFire
+                    seenFires.Add(item.gameObject);
                 }
             }
         }
@@ -641,12 +677,12 @@ public class Evacuee : MonoBehaviour
             
         }
         //if there are any seen Windows
-        else if(seenWindows.Count>0){
+        /*else if(seenWindows.Count>0){
             //the next destination is the closest Window
             Debug.Log("Destination is Window");
             result = getClosestObject(seenWindows,transform.position).transform.position;
             
-        }
+        }*/
         //otherwise
         else{
             //fire a ray forward
@@ -875,6 +911,7 @@ public class Evacuee : MonoBehaviour
                 if(Vector3.Distance(spotPastWall,transform.position)<Vector3.Distance(destinations[0],transform.position)){
                     //insert the spot as the next destination
                     destinations.Insert(0,spotPastWall);
+                    addDestinationMarker(spotPastWall);
                     //keep track of the left scan location in the list
                     leftScanLoc = 0;
                     //update the right scan location in the list
@@ -886,6 +923,7 @@ public class Evacuee : MonoBehaviour
                 else{
                     //insert the spot as the second destination
                     destinations.Insert(1,spotPastWall);
+                    addDestinationMarker(spotPastWall);
                     //keep track of the left scan location in the list
                     leftScanLoc = 1;
                 }
@@ -894,6 +932,7 @@ public class Evacuee : MonoBehaviour
             else{
                 //insert the spot as the next destination
                 destinations.Insert(0,spotPastWall);
+                addDestinationMarker(spotPastWall);
                 //keep track of the left scan location in the list
                 leftScanLoc = 0;
                 //start moving towards the new closest scan location
@@ -907,6 +946,7 @@ public class Evacuee : MonoBehaviour
                 if(Vector3.Distance(spotPastWall,transform.position)<Vector3.Distance(destinations[0],transform.position)){
                     //insert the spot as the next destination
                     destinations.Insert(0,spotPastWall);
+                    addDestinationMarker(spotPastWall);
                     //update the left scan location in the list
                     leftScanLoc = 1;
                     //keep track of the right scan location in the list
@@ -918,6 +958,7 @@ public class Evacuee : MonoBehaviour
                 else{
                     //insert the spot as the second destination
                     destinations.Insert(1,spotPastWall);
+                    addDestinationMarker(spotPastWall);
                     //keep track of the right scan location in the list
                     rightScanLoc = 1;
                 }
@@ -926,6 +967,7 @@ public class Evacuee : MonoBehaviour
             else{
                 //insert the spot as the next destination
                 destinations.Insert(0,spotPastWall);
+                addDestinationMarker(spotPastWall);
                 //keep track of the right scan location in the list
                 rightScanLoc = 0;
                 //start moving towards the new closest scan location
@@ -974,6 +1016,7 @@ public class Evacuee : MonoBehaviour
 
         //if the angle is < 0, the area in question is on the left
         if(angle<0){
+            Debug.Log("Identifying to the left");
             //round the angle up
             angle = Mathf.Ceil(angle);
             //first pass construction of walls
@@ -1013,7 +1056,11 @@ public class Evacuee : MonoBehaviour
                             closestWallPoint = getClosestWallPoint(wallList, (currentWall-1),  closestWallIndex, closestWallDst, (agent.radius*2+0.1f), wallEdge);
                             //if the closest wall point is positive infinity, no new closest point was found
                             //if the closest wall point is not positive infinity, a new closest point was found
-                            if(closestWallPoint != Vector3.positiveInfinity){
+
+
+                            //if(closestWallPoint != Vector3.positiveInfinity){
+
+
                                 //if the distance of the closest wall point is the same as (within 0.01f of) the closest wall distance, the point did not change
                                 //if the distance of the closest wall point not within 0.01f of the closest wall distance, the point did change
                                 float closestWallPointDst =Vector3.Distance(wallEdge,closestWallPoint);
@@ -1024,7 +1071,7 @@ public class Evacuee : MonoBehaviour
                                     closestWallIndex = currentWall-1; // the index of the closest wall, initially set to a nonsense number
                                     closestWallDst = closestWallPointDst;
                                 }
-                            }
+                            //}
                             /*if(currentWall>0){
                                 //check if the last wall is closest to the wallEdge
                                 toStart = Vector3.Distance(wallList[currentWall-1].getStartPoint(),wallEdge);
@@ -1151,6 +1198,7 @@ public class Evacuee : MonoBehaviour
         
         //if the angle is greater than 0, the area in question is on the right
         else{
+            Debug.Log("Identifying to the right");
             //round the angle down
             angle = Mathf.Floor(angle);
             //first pass construction of walls
@@ -1188,20 +1236,27 @@ public class Evacuee : MonoBehaviour
                             wallList.Add(new Wall(wallPoints[0],wallPoints[1],wallYVal,agent.radius*2+0.1f,wallErrorDst));
 
                             closestWallPoint = getClosestWallPoint(wallList, (currentWall-1),  closestWallIndex, closestWallDst, (agent.radius*2+0.1f), wallEdge);
+                            Debug.Log("closestWallDst: " + closestWallDst);
+                            Debug.Log("closestWallPoint != Vector3.positiveInfinity" + (closestWallPoint != Vector3.positiveInfinity));
+                            Debug.Log("closestWallPoint == Vector3.positiveInfinity" + (closestWallPoint == Vector3.positiveInfinity));
                             //if the closest wall point is positive infinity, no new closest point was found
                             //if the closest wall point is not positive infinity, a new closest point was found
-                            if(closestWallPoint != Vector3.positiveInfinity){
+
+                            //if (closestWallPoint != Vector3.positiveInfinity){
+
                                 //if the distance of the closest wall point is the same as (within 0.01f of) the closest wall distance, the point did not change
                                 //if the distance of the closest wall point not within 0.01f of the closest wall distance, the point did change
                                 float closestWallPointDst =Vector3.Distance(wallEdge,closestWallPoint);
+                                Debug.Log("closestWallPointDst: " + closestWallPointDst);
                                 //Debug.Log(currentWall+"th wall ClosestWallPointDst: " + closestWallPointDst);
                                 //Debug.Log("closestwalldst: " +closestWallDst);
-
-                                if(Mathf.Abs(closestWallPointDst-closestWallDst) > 0.01f){
+                                Debug.Log("Mathf.Abs(closestWallPointDst-closestWallDst): " + Mathf.Abs(closestWallPointDst - closestWallDst));
+                                
+                                if (Mathf.Abs(closestWallPointDst-closestWallDst) > 0.01f){
                                     closestWallIndex = currentWall-1; // the index of the closest wall, initially set to a nonsense number
                                     closestWallDst = closestWallPointDst;
                                 }
-                            }
+                            //}
                             currentWall++;
                         }
                     }
@@ -1216,8 +1271,10 @@ public class Evacuee : MonoBehaviour
         //display the gap scan information
         //Debug.Log("Found " + currentWall + " walls!");
         //Debug.Log("Closest wall: " + closestWallIndex);
-        int wallNum = 0;
+        /*int wallNum = 0;
         foreach(Wall curWall in wallList){
+            Debug.Log("wallNum: " + wallNum);
+
             GameObject newWall = Instantiate(lineHolderPrefab) as GameObject;
             newWall.transform.parent = this.transform;
             LineRenderer line = newWall.GetComponent<LineRenderer>();
@@ -1225,13 +1282,22 @@ public class Evacuee : MonoBehaviour
             line.SetPositions(new Vector3[]{curWall.getStartPoint(),curWall.getEndPoint()});
             float dst = Vector3.Distance(curWall.closestEdgePoint(wallEdge),wallEdge);
             //Debug.Log("Wall " + wallNum+ " Distance: " + dst);
-            if(closestWallIndex>=0&& /* curWall.getStartPoint() == wallList[numClosestWall].getStartPoint()&& curWall.getEndPoint() == wallList[numClosestWall].getEndPoint()*/curWall.Equals(wallList[closestWallIndex])){
-                //Debug.Log("Closest Wall Found: Wall "+wallNum);
-                //Material theMat = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;
-                line.material = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;;
-            }
-            wallNum++;
-        }
+            //if(closestWallIndex>=0&& /* curWall.getStartPoint() == wallList[numClosestWall].getStartPoint()&& curWall.getEndPoint() == wallList[numClosestWall].getEndPoint()*///curWall.Equals(wallList[closestWallIndex])){
+            //Debug.Log("Closest Wall Found: Wall "+wallNum);
+            //Material theMat = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;
+            //line.material = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;;
+            //}
+            //wallNum++;
+        //}
+
+        GameObject newWall1 = Instantiate(lineHolderPrefab) as GameObject;
+        newWall1.transform.parent = this.transform;
+        LineRenderer line1 = newWall1.GetComponent<LineRenderer>();
+        line1.enabled = true;
+        line1.SetPositions(new Vector3[] { wallList[closestWallIndex].getStartPoint(), wallList[closestWallIndex].getEndPoint() });
+        line1.material = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;
+
+        Debug.Log("closestWallIndex: " + closestWallIndex);
         
         GapInfo result = new GapInfo(wallList,closestWallIndex,closestWallPoint);
         return result;
@@ -1454,6 +1520,10 @@ public class Evacuee : MonoBehaviour
                 foreach(GameObject item in leftPeek?leftGapInfo.gapSeenWindows:rightGapInfo.gapSeenWindows){
                     Debug.Log("Saw "+item.name+" window!");
                 }
+                foreach (GameObject item in leftPeek ? leftGapInfo.gapSeenFires : rightGapInfo.gapSeenFires)
+                {
+                    Debug.Log("Saw " + item.name + " fire!");
+                }
             }
         }
     }
@@ -1463,29 +1533,41 @@ public class Evacuee : MonoBehaviour
         //if the object has been seen before the peek, it is not included
         //if we are peeking to the left, ensure that leftGapInfo
         //if(leftPeeking?leftGapInfo!=null:rightGapInfo!=null){
-            List<GameObject> gapExitsList = leftPeeking?leftGapInfo.gapSeenExits:rightGapInfo.gapSeenExits;
-            List<GameObject> gapWindowsList = leftPeeking?leftGapInfo.gapSeenWindows:rightGapInfo.gapSeenWindows;
-        
-            //if the agent sees any exits
-            foreach(Transform item in fov.visibleTargets)
-            {   
-                //Check if it is an exit
-                if(item.gameObject.layer == LayerMask.NameToLayer("FireExit")){
-                    //check if it is already seen
-                    if(!seenExits.Contains(item.gameObject)&&!gapExitsList.Contains(item.gameObject)){
-                        //add the exit to seenExits
-                        gapExitsList.Add(item.gameObject);
-                    }
-                }
-                //check if it is an window
-                else if(item.gameObject.layer == LayerMask.NameToLayer("Window")){
-                    //check if it is already seen
-                    if(!seenWindows.Contains(item.gameObject)&&!gapWindowsList.Contains(item.gameObject)){
-                        //add the exit to seenExits
-                        gapWindowsList.Add(item.gameObject);
-                    }
+        List<GameObject> gapExitsList = leftPeeking?leftGapInfo.gapSeenExits:rightGapInfo.gapSeenExits;
+        List<GameObject> gapWindowsList = leftPeeking?leftGapInfo.gapSeenWindows:rightGapInfo.gapSeenWindows;
+        List<GameObject> gapFiresList = leftPeeking ? leftGapInfo.gapSeenFires : rightGapInfo.gapSeenFires;
+
+        //if the agent sees any exits
+        foreach (Transform item in fov.visibleTargets)
+        {   
+            //Check if it is an exit
+            if(item.gameObject.layer == LayerMask.NameToLayer("FireExit")){
+                //check if it is already seen
+                if(!seenExits.Contains(item.gameObject)&&!gapExitsList.Contains(item.gameObject)){
+                    //add the exit to seenExits
+                    gapExitsList.Add(item.gameObject);
                 }
             }
+            //check if it is an window
+            else if(item.gameObject.layer == LayerMask.NameToLayer("Window")){
+                //check if it is already seen
+                if(!seenWindows.Contains(item.gameObject)&&!gapWindowsList.Contains(item.gameObject)){
+                    //add the window to seenWindows
+                    gapWindowsList.Add(item.gameObject);
+                }
+            }
+            //check if it is an window
+            else if (item.gameObject.layer == LayerMask.NameToLayer("Fire"))
+            {
+                //check if it is already seen
+                if (!seenFires.Contains(item.gameObject) && !gapFiresList.Contains(item.gameObject))
+                {
+                    //add the fire to seenFires
+                    gapFiresList.Add(item.gameObject);
+                    Debug.Log("Found fire! " + item.gameObject.name);
+                }
+            }
+        }
         //}
         
         //if the agent sees stairs, add it to the seenStairs
@@ -1496,9 +1578,34 @@ public class Evacuee : MonoBehaviour
         Vector3 startSpot;
         Vector3 leftDstCalcSpot = Vector3.positiveInfinity;
         Vector3 rightDstCalcSpot = Vector3.positiveInfinity;
+
+        //Test for route lengths by firing rays
+
+        RaycastHit hit;
+        float rightRouteLength = float.MaxValue;
+        //set up the right wall
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, 1000f, wallMask))
+        {
+            rightRouteLength = hit.distance;
+            Debug.Log("RIGHT LENGTH: " + rightRouteLength);
+        }
+        float leftRouteLength = float.MaxValue;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, 1000f, wallMask))
+        {
+            leftRouteLength = hit.distance;
+            Debug.Log("LEFT LENGTH: " + leftRouteLength);
+        }
+
+        float forwardRouteLength = float.MaxValue;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 1000f, wallMask))
+        {
+            forwardRouteLength = hit.distance;
+            Debug.Log("FORWARD LENGTH: " + forwardRouteLength);
+        }
+
         //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
-        Route leftRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), false, int.MinValue);
-        Route rightRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), false, int.MinValue);
+        Route leftRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), new List<GameObject>(), false, int.MinValue, float.MaxValue);
+        Route rightRoute = new Route(new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), new Wall(Vector3.zero, Vector3.zero, 0f, 0f, 0f), Vector3.positiveInfinity, Vector3.zero, new List<GameObject>(), new List<GameObject>(), new List<GameObject>(), false, int.MinValue, float.MaxValue);
         Route fwdRoute;
         Wall newLeftWall = leftWall;
         Wall newRightWall = rightWall;
@@ -1509,24 +1616,41 @@ public class Evacuee : MonoBehaviour
         if(leftPeeked){
             //create a left route
             //get the middle between the left gap's left and right walls
-            startSpot = ( (movingInLeftWallDir?leftWall.getEndPoint() :leftWall.getStartPoint())+leftGapInfo.closestWallPoint)/2;
+            //startSpot = ( (movingInLeftWallDir?leftWall.getEndPoint() :leftWall.getStartPoint())+leftGapInfo.closestWallPoint)/2;
+            //addDestinationMarker(startSpot);
+
+            //Debug.DrawRay(Vector3.zero,startSpot,Color.red,10.0f);
+
+            //Debug.DrawRay(Vector3.zero,leftDstCalcSpot,Color.blue,10.0f);
+            Wall rightWallOfRoute = getRightWallForLeftRoute(leftGapInfo.wallList);
+            Wall leftWallOfRoute = leftGapInfo.wallList[0];
+
+            // close but doesn't work
+            //startSpot = ((movingInLeftWallDir ? leftWallOfRoute.getStartPoint() : leftWallOfRoute.getEndPoint()) + (movingInLeftWallDir ? rightWallOfRoute.getEndPoint() : rightWallOfRoute.getStartPoint())) / 2;
+            startSpot = (leftWallOfRoute.closestEdgePoint(gameObject.transform.position) + rightWallOfRoute.closestEdgePoint(gameObject.transform.position)) / 2;
+            addDestinationMarker(startSpot);
             //Debug.DrawRay(Vector3.zero,startSpot,Color.red,10.0f);
             //put it into halfway of original hallway
             //that is the distance calculation spot
-            leftDstCalcSpot = Vector3.Project(startSpot-transform.position,Vector3.Normalize(evaDir))+transform.position;
-            //Debug.DrawRay(Vector3.zero,leftDstCalcSpot,Color.blue,10.0f);
+            leftDstCalcSpot = Vector3.Project(startSpot - transform.position, Vector3.Normalize(evaDir)) + transform.position;
 
             //create a left route
             //what is the right wall? depends on if the closest point is the start or end
             //if the closest point is the end, the right wall is the closestWallIndex
             //if the closest point is the start, the right wall is the previous wall in the list
-            
+
             //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
-            leftRoute = new Route(leftGapInfo.wallList[0], leftGapInfo.closestWallPointIsEnd?leftGapInfo.wallList[leftGapInfo.closestWallIndex]:leftGapInfo.wallList[leftGapInfo.closestWallIndex-1], startSpot, -transform.right, leftGapInfo.gapSeenExits, leftGapInfo.gapSeenWindows, false, 0);
-            
+            //leftRoute = new Route(leftGapInfo.wallList[0], leftGapInfo.closestWallPointIsEnd?leftGapInfo.wallList[leftGapInfo.closestWallIndex]:leftGapInfo.wallList[leftGapInfo.closestWallIndex-1], startSpot, -transform.right, leftGapInfo.gapSeenExits, leftGapInfo.gapSeenWindows, leftGapInfo.gapSeenFires, false, 0, leftRouteLength);
+
+            // determine angle we should head in
+            Vector3 routeDirection = leftWallOfRoute.directionBetweenWalls(rightWallOfRoute, -transform.right);
+
+            leftRoute = new Route(leftWallOfRoute, rightWallOfRoute, startSpot, routeDirection, leftGapInfo.gapSeenExits, leftGapInfo.gapSeenWindows, leftGapInfo.gapSeenFires, false, 0, leftRouteLength);
+
+
             //set up the new left wall for moving forwards
             //if the closest wall point is the end point of the wall
-            if(leftGapInfo.closestWallPointIsEnd){
+            if (leftGapInfo.closestWallPointIsEnd){
                 //if there is a wall after the closest wall
                 if(leftGapInfo.closestWallIndex+1<leftGapInfo.wallList.Count){
                     //make that the new left wall
@@ -1547,21 +1671,40 @@ public class Evacuee : MonoBehaviour
         //if we peeked to the right
         if(rightPeeked){
             //get the middle between the right gap's left and right walls
-            startSpot = ( (movingInRightWallDir?rightWall.getEndPoint() :rightWall.getStartPoint())+rightGapInfo.closestWallPoint)/2;
+            //startSpot = ( (movingInRightWallDir?rightWall.getEndPoint() :rightWall.getStartPoint())+rightGapInfo.closestWallPoint)/2;
+            //addDestinationMarker(startSpot);
+
+
             //Debug.DrawRay(Vector3.zero,startSpot,Color.red,10.0f);
+  
+            Wall leftWallOfRoute = getLeftWallForRightRoute(rightGapInfo.wallList);
+            Wall rightWallOfRoute = rightGapInfo.wallList[0];
+
+            //get the middle between the right gap's left and right walls
+            //startSpot = ((movingInRightWallDir ? rightWallOfRoute.getStartPoint() : rightWallOfRoute.getEndPoint()) + (movingInRightWallDir ? leftWallOfRoute.getEndPoint() : leftWallOfRoute.getStartPoint())) / 2;
+            startSpot = (leftWallOfRoute.closestEdgePoint(gameObject.transform.position) + rightWallOfRoute.closestEdgePoint(gameObject.transform.position)) / 2;
+            addDestinationMarker(startSpot);
+
             //put it into halfway of original hallway
             //that is the distance calculation spot
-            rightDstCalcSpot = Vector3.Project(startSpot-transform.position,Vector3.Normalize(evaDir))+transform.position;
+            rightDstCalcSpot = Vector3.Project(startSpot - transform.position, Vector3.Normalize(evaDir)) + transform.position;
+
             //Debug.DrawRay(Vector3.zero,rightDstCalcSpot,Color.blue,10.0f);
             //create a right route
             //what is the left wall? depends on if the closest point is the start or end
             //if the closest point is the end, the left wall is the closestWallIndex
             //if the closest point is the start, the left wall is the previous wall in the list
-            rightRoute = new Route(rightGapInfo.closestWallPointIsEnd?rightGapInfo.wallList[rightGapInfo.closestWallIndex]:rightGapInfo.wallList[rightGapInfo.closestWallIndex-1], rightGapInfo.wallList[0], startSpot, transform.right, rightGapInfo.gapSeenExits, rightGapInfo.gapSeenWindows, false, 0);
-            
+            //rightRoute = new Route(rightGapInfo.closestWallPointIsEnd?rightGapInfo.wallList[rightGapInfo.closestWallIndex]:rightGapInfo.wallList[rightGapInfo.closestWallIndex-1], rightGapInfo.wallList[0], startSpot, transform.right, rightGapInfo.gapSeenExits, rightGapInfo.gapSeenWindows, rightGapInfo.gapSeenFires, false, 0, rightRouteLength);
+
+            // determine angle we should head in
+            Vector3 routeDirection = leftWallOfRoute.directionBetweenWalls(rightWallOfRoute, transform.right);
+
+            rightRoute = new Route(leftWallOfRoute, rightWallOfRoute, startSpot, routeDirection, rightGapInfo.gapSeenExits, rightGapInfo.gapSeenWindows, rightGapInfo.gapSeenFires, false, 0, rightRouteLength);
+
+
             //set up the new right wall for moving forwards
             //if the closest wall point is the end point of the wall
-            if(rightGapInfo.closestWallPointIsEnd){
+            if (rightGapInfo.closestWallPointIsEnd){
                 //if there is a wall after the closest wall
                 if(rightGapInfo.closestWallIndex+1<rightGapInfo.wallList.Count){
                     //make that the new right wall
@@ -1580,6 +1723,10 @@ public class Evacuee : MonoBehaviour
             }
         }
 
+
+
+        // TODO: IS THIS NECESSARY?
+        /*
         //if there was a left and right peak
         if(leftPeeked&&rightPeeked){
             //compare the two routes
@@ -1594,15 +1741,27 @@ public class Evacuee : MonoBehaviour
                 rightRoute.priority++;
             }
         }
+
+        */
+
+
+        // Do some checks to see if we should have a forward route
+        bool thereIsAForwardPath = IsThereAForwardPath(leftRoute, rightRoute);
+
+
+
         //create a forward route
         //Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority)
         Vector3 fartherWall = leftPeeked?rightPeeked?(Vector3.Distance(leftGapInfo.closestWallPoint,transform.position)<Vector3.Distance(rightGapInfo.closestWallPoint,transform.position))?rightGapInfo.closestWallPoint:leftGapInfo.closestWallPoint:leftGapInfo.closestWallPoint:rightGapInfo.closestWallPoint;
 
         startSpot = Vector3.Project(fartherWall-transform.position,Vector3.Normalize(evaDir))+transform.position;
+        addDestinationMarker(startSpot);
         //(Vector3.Distance(leftDstCalcSpot,transform.position)<Vector3.Distance(rightDstCalcSpot,transform.position))?leftDstCalcSpot:rightDstCalcSpot
-        fwdRoute = new Route(newLeftWall, newRightWall, startSpot, evaDir, seenExits, seenWindows, false, 0);
+        fwdRoute = new Route(newLeftWall, newRightWall, startSpot, evaDir, seenExits, seenWindows, seenFires, false, 0, forwardRouteLength);
 
-        //if we have peeked left
+        List<Route> routes = OrderRoutes(fwdRoute, leftRoute, rightRoute, thereIsAForwardPath, leftDstCalcSpot, rightDstCalcSpot);
+
+        /*//if we have peeked left
         if(leftPeeked){
             //compare the left route and the forward route
             //if the leftRoute has higher priority (compareTo<0) than fwd route
@@ -1663,7 +1822,7 @@ public class Evacuee : MonoBehaviour
                 //put the right route at the start of the list
                 routes.Insert(0,rightRoute);
             }
-        }
+        } */
 
         //move down the path that has the highest priority
         routes[routes.Count-1].setChosen(true);
@@ -1686,6 +1845,422 @@ public class Evacuee : MonoBehaviour
         leftSensorTripped = false;
         rightSensorTripped = false;
     }
+
+    private bool IsThereAForwardPath(Route leftRoute, Route rightRoute)
+    {
+        bool forwardPathExists = false;
+        int numRaysFired = 0;
+        int numRaysToFire = 5;
+
+        float visionAngle = forwardWallDetectionAngle;
+        int numGaps = numRaysToFire - 1;
+        int raysOnSide = (int)Mathf.Floor(numRaysToFire / 2);
+        float anglesBetweenRays = visionAngle / numGaps;
+
+        float leftmostAngle = -visionAngle / 2;
+        // if only firing one ray, just fire forwards
+        if (numRaysToFire == 0)
+        {
+            leftmostAngle = 0;
+        }
+
+        while (!forwardPathExists && numRaysFired < numRaysToFire)
+        {
+            float rayAngle = leftmostAngle + (anglesBetweenRays * numRaysFired);
+            // Calculate the direction of the ray to fire
+            Vector3 rayDirection = DirFromAngle(rayAngle, false);
+            RaycastHit hit;
+            if(DrawAndFireRay(transform.position, rayDirection, out hit, sensorRadius, 10, wallMask))
+            {
+
+                Debug.Log("Ray Fired AND HIT!! Hit: " + hit.point);
+                float errorDistance = 5;
+                // if we peeked left, we have a wall we can compare to
+                if (leftPeeked)
+                {
+
+                    // the wall that is 'forward' from the agent is on the right side of the left route
+                    Wall leftSideForwardWall = leftRoute.routeRightWall;
+                    Debug.Log("leftSideForwardWall start " + leftSideForwardWall.startPoint + " direction " + leftSideForwardWall.dir);
+                    /*GameObject destinationMarker = Instantiate(rayHitMarkerPrefab) as GameObject;
+                    destinationMarker.transform.position = leftSideForwardWall.startPoint;
+                    GameObject destinationMarker2 = Instantiate(rayHitMarkerPrefab) as GameObject;
+                    destinationMarker2.transform.position = leftRoute.routeRightWall.startPoint;*/
+
+                    // if the hit point was on the wall
+                    if (!leftSideForwardWall.isAlongWall(hit.point, errorDistance)) {
+                        Debug.Log("The hit point was NOT on the wall...");
+                        forwardPathExists = true;
+                    }
+                    else
+                    {
+                        Debug.Log("The hit point was ON THE WALL!!");
+                    }
+                }
+                // if we peeked right, we have a different wall we can compare to
+                if (rightPeeked)
+                {
+                    // the wall that is 'forward' from the agent is on the left side of the right route
+                    Wall rightSideForwardWall = rightRoute.routeLeftWall;
+                    Debug.Log("rightSideForwardWall  start " + rightSideForwardWall.startPoint + " direction " + rightSideForwardWall.dir);
+                    /*GameObject destinationMarker = Instantiate(rayHitMarkerPrefab) as GameObject;
+                    destinationMarker.transform.position = rightSideForwardWall.startPoint;
+                    GameObject destinationMarker2 = Instantiate(rayHitMarkerPrefab) as GameObject;
+                    destinationMarker2.transform.position = rightRoute.routeLeftWall.startPoint;*/
+
+                    // if the hit point was on the wall
+                    if (!rightSideForwardWall.isAlongWall(hit.point, errorDistance))
+                    {
+                        Debug.Log("The hit point was NOT on the wall...");
+                        forwardPathExists = true;
+                    }
+                    else
+                    {
+                        Debug.Log("The hit point was ON THE WALL!!");
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("Ray Fired but no hit...");
+                forwardPathExists = true;
+            }
+            //if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, 1000f, wallMask))
+            
+            numRaysFired++;
+        }
+
+        // fire rays forward and see if they collide
+        // for each of the rays
+        //      check if the ray hit
+        //      if the ray hit, check if it is along either of the walls
+        //      if the ray is NOT along a wall, then there is a foward path
+        return forwardPathExists;
+    }
+
+    private List<Route> OrderRoutes (Route fwdRoute, Route leftRoute, Route rightRoute, bool thereIsForwardRoute, Vector3 leftDstCalcSpot, Vector3 rightDstCalcSpot)
+    {
+        //TODO: PUT SAVE FUNCTIONALITY HERE -> Put a header saying what was compared (left, right, fwd)
+        OutputDecisionHeader(fwdRoute, leftRoute, rightRoute, thereIsForwardRoute);
+
+
+
+        //if we have peeked left
+        if (leftPeeked && thereIsForwardRoute)
+        {
+            //compare the left route and the forward route
+            //if the leftRoute has higher priority (compareTo<0) than fwd route
+            if (leftRoute.compareTo(fwdRoute, leftDstCalcSpot, leftDstCalcSpot, evaDir) < 0)
+            {
+                //increment the left route's priority
+                leftRoute.priority++;
+            }
+            //if the fwdRoute has higher priority than the left route
+            else
+            {
+                //increment the forward route's priority
+                fwdRoute.priority++;
+            }
+        }
+        //if we have peeked right
+        if (rightPeeked && thereIsForwardRoute)
+        {
+            //compare the right route and the forward route
+            //if the fwdRoute has higher priority (compareTo<0) than right route
+            if (fwdRoute.compareTo(rightRoute, rightDstCalcSpot, rightDstCalcSpot, evaDir) < 0)
+            {
+                //increment the fwd route's priority
+                fwdRoute.priority++;
+            }
+            //if the rightRoute has higher priority than the fwd route
+            else
+            {
+                //increment the right route's priority
+                rightRoute.priority++;
+            }
+        }
+        if (leftPeeked && rightPeeked)
+        {
+            //if the leftRoute has higher priority (compareTo<0) than right route
+            if (leftRoute.compareTo(rightRoute, leftDstCalcSpot, rightDstCalcSpot, evaDir) < 0)
+            {
+                //increment the left route's priority
+                leftRoute.priority++;
+            }
+            //if the rightRoute has higher priority than the left route
+            else
+            {
+                //increment the right route's priority
+                rightRoute.priority++;
+            }
+        }
+
+        List<Route> routes = new List<Route>();
+        if (thereIsForwardRoute)
+        {
+            routes.Add(fwdRoute);
+            if (leftPeeked) // if forward and left peeked
+            {
+                //if the left route has higher priority than the forward route
+                if (fwdRoute.priority < leftRoute.priority)
+                {
+                    //put the left route at the end of the list
+                    routes.Insert(1, leftRoute);
+                }
+                //if the forward route has higher priority than the left route
+                else
+                {
+                    //put the left route at the start of the list
+                    routes.Insert(0, leftRoute);
+                }
+
+                //if we also peeked right
+                if (rightPeeked)
+                {
+                    routes.Insert(rightRoute.priority, rightRoute);
+                }
+            }
+            else if (rightPeeked)// if only forward route and right route
+            {
+                //if the right route has higher priority than the forward route
+                if (fwdRoute.priority < rightRoute.priority)
+                {
+                    //put the right route at the end of the list
+                    routes.Insert(1, rightRoute);
+                }
+                //if the forward route has higher priority than the right route
+                else
+                {
+                    //put the right route at the start of the list
+                    routes.Insert(0, rightRoute);
+                }
+            }
+        }
+        else
+        {
+            if (leftPeeked) // if no forward but did left peek
+            {
+                routes.Add(leftRoute);
+                if (rightPeeked) // if also peeked right
+                {
+                    //if the right route has higher priority than the left route
+                    if (leftRoute.priority < rightRoute.priority)
+                    {
+                        //put the right route at the end of the list
+                        routes.Insert(1, rightRoute);
+                    }
+                    //if the left route has higher priority than the right route
+                    else
+                    {
+                        //put the right route at the start of the list
+                        routes.Insert(0, rightRoute);
+                    }
+                }
+            }
+            else // if only right peeked
+            {
+                routes.Add(rightRoute);
+            }
+        }
+        /*
+        routes.Add(fwdRoute);
+        //if we peeked left
+        if (leftPeeked)
+        {
+            //if the left route has higher priority than the forward route
+            if (fwdRoute.priority < leftRoute.priority)
+            {
+                //put the left route at the end of the list
+                routes.Insert(1, leftRoute);
+            }
+            //if the forward route has higher priority than the left route
+            else
+            {
+                //put the left route at the start of the list
+                routes.Insert(0, leftRoute);
+            }
+
+            //if we also peeked right
+            if (rightPeeked)
+            {
+                routes.Insert(rightRoute.priority, rightRoute);
+            }
+        }
+        //if we did not peek left (we must have peeked right)
+        else
+        {
+            //if the right route has higher priority than the forward route
+            if (fwdRoute.priority < rightRoute.priority)
+            {
+                //put the right route at the end of the list
+                routes.Insert(1, rightRoute);
+            }
+            //if the forward route has higher priority than the right route
+            else
+            {
+                //put the right route at the start of the list
+                routes.Insert(0, rightRoute);
+            }
+        }*/
+
+        //TODO: PUT SAVE FUNCTIONALITY HERE -> If there are more than one route in here, say which route has the highest priority
+        if(routes.Count > 1)
+        {
+            DecisionSaver.SaveDecision(decisionFileName, "The highest priority Route is " + routes[routes.Count-1].startSpot);
+        }
+        
+
+        // if more than one route is present, output a spacer into the text file
+        if ((leftPeeked && rightPeeked)
+            || (leftPeeked && thereIsForwardRoute)
+            || (rightPeeked && thereIsForwardRoute))
+        {
+            
+            DecisionSaver.SaveDecision(decisionFileName, "");
+            DecisionSaver.SaveDecision(decisionFileName, "");
+        }
+
+
+        return routes;
+    }
+
+    private Wall getLeftWallForRightRoute(List<Wall> gapWallList)
+    {
+        float angleThreshold = 30;
+        Debug.Log("GapWallList count: " + gapWallList.Count);
+        Wall resultWall = null;
+        Wall wallWithSmallestAngleDifference = null;
+        
+        if (gapWallList != null && gapWallList.Count > 2)
+        {
+            Wall rightWall = gapWallList[0];
+            
+            Wall curWall = null;
+            List<Wall> possibleLeftWalls = new List<Wall>();
+            Wall firstLeftWallFound = null;
+            for(int i = 0; i < gapWallList.Count; i++)
+            {
+                curWall = gapWallList[i];
+                Debug.Log("Length of wall [" + i + "] is: " + curWall.getLength());
+                if (!rightWall.isAlongWall(curWall.getStartPoint(), wallErrorDst))
+                {
+                    float angleBetween = Vector3.Angle(rightWall.getDir().normalized, curWall.getDir().normalized);
+                    if (angleBetween > 90)  // if the angle is greater than 90, that means they might be close to being in the opposite direction
+                                            // for our purposes, having the angles be in oppsite directions is fine,
+                                            // we just want to make sure the lines are in parallel (negative vs positive doesn't matter)
+                    {
+                        angleBetween = 180 - angleBetween;
+                    }
+                    Debug.Log("Angle between wall [" + i + "] and wall [0] is: " + angleBetween);
+                    
+                    if (angleBetween < angleThreshold)
+                    {
+                        if (firstLeftWallFound == null)
+                        {
+                            firstLeftWallFound = curWall;
+                            possibleLeftWalls.Add(curWall);
+                            Debug.Log("Angle led to finding the first left wall, which was wall [" + i + "]");
+                        }
+                        else if (firstLeftWallFound.isAlongWall(curWall.getStartPoint(), wallErrorDst+0.4f))
+                        //else
+                        {
+                            possibleLeftWalls.Add(curWall);
+                            
+                            Debug.Log("Angle led to finding another possible left wall, which was wall [" + i + "]");
+                        }
+                        
+                        
+                    }
+                }
+            }
+
+            if (leftRightWallMarkerPrefab != null)
+            {
+                GameObject wallStartMarker3 = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                wallStartMarker3.transform.position = rightWall.getStartPoint();
+                wallStartMarker3.name = "same side wall start marker";
+                GameObject wallStartMarker4 = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                wallStartMarker4.transform.position = rightWall.getEndPoint();
+                wallStartMarker4.name = "same side wall end marker";
+            }
+            if (possibleLeftWalls.Count > 0)
+            {
+                resultWall = possibleLeftWalls[(possibleLeftWalls.Count - 1)];
+                int wallNum = 0;
+                foreach (Wall curWall1 in possibleLeftWalls)
+                {
+                    Debug.Log("wallNum: " + wallNum);
+
+                    GameObject newWall = Instantiate(lineHolderPrefab) as GameObject;
+                    newWall.transform.parent = this.transform;
+                    LineRenderer line = newWall.GetComponent<LineRenderer>();
+                    line.enabled = true;
+                    line.SetPositions(new Vector3[] { curWall1.getStartPoint(), curWall1.getEndPoint() });
+                    //Debug.Log("Wall " + wallNum+ " Distance: " + dst);
+                    //if(closestWallIndex>=0&& /* curWall.getStartPoint() == wallList[numClosestWall].getStartPoint()&& curWall.getEndPoint() == wallList[numClosestWall].getEndPoint()*///curWall.Equals(wallList[closestWallIndex])){
+                    //Debug.Log("Closest Wall Found: Wall "+wallNum);
+                    //Material theMat = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;
+                    //line.material = Resources.Load<Material>("Materials/ClosestWallMaterial"/* , typeof(Material)*/) as Material;;
+                    //}
+                    wallNum++;
+                }
+            }
+            if (leftRightWallMarkerPrefab != null)
+            {
+                GameObject wallStartMarker = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                wallStartMarker.transform.position = resultWall.getStartPoint();
+                wallStartMarker.name = "opposite side wall start marker";
+                GameObject wallStartMarker2 = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                wallStartMarker2.transform.position = resultWall.getEndPoint();
+                wallStartMarker2.name = "opposite side wall end marker";
+            }
+
+            /*if (leftRightWallMarkerPrefab != null)
+            {
+                GameObject wallStartMarker = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                wallStartMarker.transform.position = resultWall.getStartPoint();
+            }*/
+
+
+            /*bool leftWallFound = false;
+            int j = gapWallList.Count - 1;
+            while (!leftWallFound && j > 0)
+            {
+                curWall = gapWallList[j];
+                float angleBetween = Vector3.Angle(rightWall.getDir().normalized, curWall.getDir().normalized);
+                if (angleBetween > 90)  // if the angle is greater than 90, that means they might be close to being in the opposite direction
+                                        // for our purposes, having the angles be in oppsite directions is fine,
+                                        // we just want to make sure the lines are in parallel (negative vs positive doesn't matter)
+                {
+                    angleBetween = 180 - angleBetween;
+                }
+                Debug.Log("Angle between wall [" + j + "] and wall [0] is: " + angleBetween);
+                if(angleBetween < angleThreshold)
+                {
+                    leftWallFound = true;
+                    resultWall = curWall;
+                    Debug.Log("Angle led to finding the correct right wall, which was wall [" + j + "]");
+                    if(leftRightWallMarkerPrefab != null)
+                    {
+                        GameObject wallStartMarker = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                        wallStartMarker.transform.position = resultWall.getStartPoint();
+                        GameObject wallStartMarker2 = Instantiate(leftRightWallMarkerPrefab) as GameObject;
+                        wallStartMarker2.transform.position = rightWall.getStartPoint();
+                    }
+                }
+                j--;
+            }
+            resultWall = gapWallList[0];*/
+        }
+        return resultWall;
+    }
+
+    private Wall getRightWallForLeftRoute(List<Wall> gapWallList)
+    {
+        return getLeftWallForRightRoute(gapWallList); // logically the same, the walls are stored in opposite orders for opposite route sides
+    }
+
+
     public Vector3 DirFromAngle(float angleInDegrees,bool angleIsGlobal){
         //if the angle is not global, add the y transform
         if(!angleIsGlobal){
@@ -1698,6 +2273,7 @@ public class Evacuee : MonoBehaviour
         GameObject closest = null;
         float minDst = float.MaxValue; //the distance of the closest item to the point
         foreach(GameObject item in listOfObj){
+            Debug.Log("finding closest object, object considering: " + item.name);
             float iDst = Vector3.Distance(item.transform.position,point);
             if(iDst<minDst){
                 minDst = iDst;
@@ -1715,6 +2291,7 @@ public class Evacuee : MonoBehaviour
         public bool closestWallPointIsEnd; //if the closestWallPoint is the endpoint of the wall
         public List<GameObject> gapSeenExits;
         public List<GameObject> gapSeenWindows;
+        public List<GameObject> gapSeenFires;
 
 
         public GapInfo(List<Wall> _wallList,int _closestWallIndex, Vector3 _closestWallPoint ){
@@ -1724,6 +2301,7 @@ public class Evacuee : MonoBehaviour
             closestWallPointIsEnd = (Vector3.Distance(wallList[closestWallIndex].getEndPoint(),closestWallPoint)<0.1f);
             gapSeenExits = new List<GameObject>();
             gapSeenWindows = new List<GameObject>();
+            gapSeenFires = new List<GameObject>();
         }
         public GapInfo(List<Wall> _wallList, int _closestWallIndex, bool _closestWallPointIsEnd){
             wallList = _wallList;
@@ -1732,6 +2310,7 @@ public class Evacuee : MonoBehaviour
             closestWallPoint = closestWallPointIsEnd?wallList[closestWallIndex].getEndPoint():wallList[closestWallIndex].getStartPoint();
             gapSeenExits = new List<GameObject>();
             gapSeenWindows = new List<GameObject>();
+            gapSeenFires = new List<GameObject>();
         }
     }
 
@@ -1742,18 +2321,22 @@ public class Evacuee : MonoBehaviour
         public Vector3 routeDirection;
         public List<GameObject> routeSeenExits;
         public List<GameObject> routeSeenWindows;
+        public List<GameObject> routeSeenFires;
         public bool chosen;
         public int priority;
+        public float length;
         
-        public Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, bool _chosen, int _priority){
+        public Route(Wall _leftWall, Wall _rightWall, Vector3 _startSpot, Vector3 _direction, List<GameObject> _routeSeenExits, List<GameObject> _routeSeenWindows, List<GameObject> _routeSeenFires, bool _chosen, int _priority, float _length){
             routeLeftWall = _leftWall;
             routeRightWall = _rightWall;
             startSpot = _startSpot;
             routeDirection = _direction;
             routeSeenExits = _routeSeenExits;
             routeSeenWindows = _routeSeenWindows;
+            routeSeenFires = _routeSeenFires;
             chosen = _chosen;
             priority = _priority;
+            length = _length;
         }
         public GameObject getClosestSeenExit(Vector3 point){
             return getClosestObject(routeSeenExits,point);
@@ -1761,11 +2344,19 @@ public class Evacuee : MonoBehaviour
         public GameObject getClosestSeenWindow(Vector3 point){
             return getClosestObject(routeSeenWindows,point);
         }
+        public GameObject getClosestSeenFire(Vector3 point)
+        {
+            return getClosestObject(routeSeenFires, point);
+        }
         public float closestSeenExitDst(Vector3 point){
             return Vector3.Distance(point,getClosestSeenExit(point).transform.position);
         }
         public float closestSeenWindowDst(Vector3 point){
             return Vector3.Distance(point,getClosestSeenWindow(point).transform.position);
+        }
+        public float closestSeenFireDst(Vector3 point)
+        {
+            return Vector3.Distance(point, getClosestSeenFire(point).transform.position);
         }
         private GameObject getClosestObject(List<GameObject> listOfObj, Vector3 point){
             GameObject closest = null;
@@ -1803,20 +2394,36 @@ public class Evacuee : MonoBehaviour
             //compare exits
             //if this route has exits
             if(routeSeenExits.Count>0){
+                Debug.Log("PRIORITY IS BASED ON EXITS");
                 //if the other route has exits
-                if(other.routeSeenExits.Count>0){
+                if (other.routeSeenExits.Count>0){
                     //compare the distances of the exits
-                    float dstDiff = (closestSeenExitDst(thisDstCalcSpot)-other.closestSeenExitDst(otherDstCalcSpot))*1000;
+                    Debug.Log("thisDstCalcSpot: " + thisDstCalcSpot);
+                    Debug.Log("otherDstCalcSpot: " + otherDstCalcSpot);
+                    float dstDiff = (closestSeenExitDst(thisDstCalcSpot)-other.closestSeenExitDst(otherDstCalcSpot));
                     //if the difference is significant
-                    if(Mathf.Abs(dstDiff)>1){
+                    if(Mathf.Abs(dstDiff)>10){
                         Debug.Log("Exit " + getClosestSeenExit(thisDstCalcSpot).name + " or Exit " + other.getClosestSeenExit(otherDstCalcSpot).name +" is closer by "+dstDiff);
+
+                        // Other route has a closer exit than this route
+                        if(closestSeenExitDst(thisDstCalcSpot) > other.closestSeenExitDst(otherDstCalcSpot))
+                        {
+                            Evacuee.OutputComparisonReason(other, this, "has a closer exit");
+                        }
+                        else
+                        {
+                            Evacuee.OutputComparisonReason(this, other, "has a closer exit");
+                        }
+
                         return (int)(dstDiff);
                     }
                     //((other.closestSeenExitDst(otherDstCalcSpot)-closestSeenExitDst(thisDstCalcSpot))*1000);
                 }
                 //if this route has an exit and the other does not, this route comes first
                 else{
+
                     Debug.Log("Only Exit " + getClosestSeenExit(thisDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(this, other, "is the only route with an exit");
                     return -1;
                 }
             }
@@ -1825,27 +2432,90 @@ public class Evacuee : MonoBehaviour
                 //if the other route has exits
                 if(other.routeSeenExits.Count>0){
                     Debug.Log("Only Exit " + other.getClosestSeenExit(otherDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(other, this, "is the only route with an exit");
                     //this route comes second
                     return 1;
                 }
             }
 
+            //compare fires
+            //if this route has fire
+            if (routeSeenFires.Count > 0)
+            {
+                Debug.Log("PRIORITY IS BASED ON FIRES");
+                //if the other route has fires
+                if (other.routeSeenFires.Count > 0)
+                {
+                    //compare the distances of the fires
+                    float dstDiff = (closestSeenFireDst(thisDstCalcSpot) - other.closestSeenFireDst(otherDstCalcSpot)) * 1000;
+                    //if the difference is significant
+                    if (Mathf.Abs(dstDiff) > 10)
+                    {
+                        Debug.Log("Fire " + getClosestSeenFire(thisDstCalcSpot).name + " or Fire " + other.getClosestSeenFire(otherDstCalcSpot).name + " is closer by " + dstDiff);
+                        // Other route has a closer fire than the this route
+                        if (closestSeenFireDst(thisDstCalcSpot) > other.closestSeenFireDst(otherDstCalcSpot))
+                        {
+                            Evacuee.OutputComparisonReason(this, other, "the second route has a closer fire");
+                        }
+                        else
+                        {
+                            Evacuee.OutputComparisonReason(other, this, "the second route has a closer fire");
+                        }
+
+                        return (int)(-dstDiff);
+                    }
+                    //((other.closestSeenExitDst(otherDstCalcSpot)-closestSeenExitDst(thisDstCalcSpot))*1000);
+                }
+                //if this route has a fire and the other does not, this route comes second
+                else
+                {
+                    Debug.Log("Only Fire " + getClosestSeenFire(thisDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(other, this, "the second route has a fire and the first does not");
+                    return 1;
+                }
+            }
+            //if this route does not have fires
+            else
+            {
+                //if the other route has fires
+                if (other.routeSeenFires.Count > 0)
+                {
+                    Debug.Log("Only Fire " + other.getClosestSeenFire(otherDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(this, other, "the second route has a fire and the first does not");
+                    //this route comes first
+                    return -1;
+                }
+            }
+
             //compare Windows
             //if this route has Windows
-            if(routeSeenWindows.Count>0){
+            if (routeSeenWindows.Count>0){
+                Debug.Log("PRIORITY IS BASED ON WINDOWS");
                 //if the other route has exits
-                if(other.routeSeenWindows.Count>0){
+                if (other.routeSeenWindows.Count>0){
                     //compare the distances of the Windows
                     float dstDiff = (closestSeenWindowDst(thisDstCalcSpot)-other.closestSeenWindowDst(otherDstCalcSpot))*1000;
                     //if the difference is significant
-                    if(Mathf.Abs(dstDiff)>1){
+                    if(Mathf.Abs(dstDiff)>10){
                         Debug.Log("Window " + getClosestSeenWindow(thisDstCalcSpot).name + " or Window " + other.getClosestSeenWindow(otherDstCalcSpot).name +" is closer by "+dstDiff);
+
+                        // This route has a closer window than the other route
+                        if (closestSeenWindowDst(thisDstCalcSpot) < other.closestSeenWindowDst(otherDstCalcSpot))
+                        {
+                            Evacuee.OutputComparisonReason(this, other, "the first route has a closer window");
+                        }
+                        else
+                        {
+                            Evacuee.OutputComparisonReason(other, this, "the first route has a closer window");
+                        }
+
                         return (int)(dstDiff);
                     }
                 }
                 //if this route has an Window and the other does not, this route comes first
                 else{
                     Debug.Log("Only Window " + getClosestSeenWindow(thisDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(this, other, "the first route is the only route with a window");
                     return -1;
                 }
             }
@@ -1854,42 +2524,90 @@ public class Evacuee : MonoBehaviour
                 //if the other route has Windows
                 if(other.routeSeenWindows.Count>0){
                     Debug.Log("Only Window " + other.getClosestSeenWindow(otherDstCalcSpot).name);
+                    Evacuee.OutputComparisonReason(other, this, "the first route is the only route with a window");
                     //this route comes second
                     return 1;
                 }
             }
-
-            //Compare widths of the routes
-            //if the widths difference is significant
-            if(Mathf.Abs(getRouteWidth()-other.getRouteWidth())>1){
-                //if this route is smaller than the other
-                if((getRouteWidth()-other.getRouteWidth())<0){
-                    Debug.Log("This width, " + getRouteWidth() + " is smaller than that width, " + other.getRouteWidth());
-                    //this route comes later
-                    return 1;
-                }
-                //else if this route is larger than the other
-                else if((getRouteWidth()-other.getRouteWidth())>0){
-                    Debug.Log("Other width, " + other.getRouteWidth() + " is smaller than this width, " + getRouteWidth());
-                    return -1;
-                }
-            }
-            
 
             //Compare directions
             //ensure all directions have y value of 0
             agentDir.y = 0;
             other.routeDirection.y = 0;
             routeDirection.y = 0;
-            //if this route is closer to the direction of the agent
-            if(Vector3.Angle(agentDir,routeDirection)<Vector3.Angle(agentDir,other.routeDirection)){
-                Debug.Log("This direction is more straight");
+            float thisRouteAngleDiff = Vector3.Angle(agentDir, routeDirection);
+            float otherRouteAngleDiff = Vector3.Angle(agentDir, other.routeDirection);
+
+            // if either of the routes are within the threshold
+            float straightThreshold = 10f;
+            if (Mathf.Abs(thisRouteAngleDiff) < straightThreshold
+                || Mathf.Abs(otherRouteAngleDiff) < straightThreshold
+                ) {
+                Debug.Log("PRIORITY IS BASED ON ROUTE STRAIGHTNESS");
+                //if this route is closer to the direction of the agent
+                if (thisRouteAngleDiff < otherRouteAngleDiff)
+                {
+                    Debug.Log("this direction is more straight");
+                    Evacuee.OutputComparisonReason(this, other, "the first route is more straight than the second");
+                    return -1;
+                }
+                else
+                {
+                    Debug.Log("other direction is more straight");
+                    Evacuee.OutputComparisonReason(other, this, "the first route is more straight than the second");
+                    return 1;
+                }
+            }
+
+
+
+            // compare lengths:
+            Debug.Log("THIS LENGTH: " + length);
+            Debug.Log("OTHER LENGTH: " + other.length);
+            float lengthDiff = length - other.length;
+            Debug.Log("lengthDiff: " + lengthDiff);
+            float lengthThreshold = 20f;
+            // if the difference is significant
+            if(Mathf.Abs(lengthDiff) > lengthThreshold)
+            {
+                Debug.Log("PRIORITY IS BASED ON ROUTE LENGTH");
+                Debug.Log("Length difference is " + lengthDiff);
+                // if this path is shorter than the other path
+                if(lengthDiff < 0)
+                {
+                    Debug.Log("Chose this path because it is shorter");
+                    Evacuee.OutputComparisonReason(this, other, "the first route is shorter than the second");
+                    // this path is higher priority since it is shorter
+                    return -1;
+                }
+                else
+                {
+                    Debug.Log("Chose other path because it is shorter");
+                    Evacuee.OutputComparisonReason(other, this, "the first route is shorter than the second");
+                    // the other path is higher priority since it is shorter
+                    return 1;
+                }
+            }
+
+            // if no other factors dictate where the agent goes, randomly choose
+            float routeSelector = Random.value;
+            Debug.Log("PRIORITY IS BASED ON RANDOM SELECTION");
+            // If randomly got in the lower half of possible values, select this path as higher priority
+            if (routeSelector < 0.5)
+            {
+                Debug.Log("Randomly chose other route");
+                Evacuee.OutputComparisonReason(this, other, "it was a random decision");
                 return -1;
             }
-            else{
-                Debug.Log("Other direction is more straight");
+            // If randomly got in the lower half of possible values, select other path as higher priority
+            else
+            {
+                Debug.Log("Randomly chose this route");
+                Evacuee.OutputComparisonReason(other, this, "it was a random decision");
                 return 1;
             }
+
+            
         }
         public string ToString(){
             return "Route start " + startSpot + " Dir " + routeDirection;
@@ -1910,5 +2628,64 @@ public class Evacuee : MonoBehaviour
             nextRoute = _nextRoute;
         }
     }
+
+    private bool DrawAndFireRay(Vector3 origin, Vector3 direction, out RaycastHit hit, float maxDistance, float visualDuration, int layerMask, [Optional] Color rayColor)
+    {
+        
+        if (visualizeRays)
+        {
+            // Check if the ray color is the default value
+            if (rayColor == new Color())
+            {
+                // If default color, change it to green
+                rayColor = Color.green;
+            }
+            Debug.DrawRay(origin, direction.normalized * maxDistance, rayColor, visualDuration);
+        }
+        
+        if (Physics.Raycast(origin, direction, out hit, maxDistance, layerMask))
+        {
+            if (visualizeRayHit && rayHitMarkerPrefab != null)
+            {
+                GameObject destinationMarker = Instantiate(rayHitMarkerPrefab) as GameObject;
+                destinationMarker.transform.position = hit.point;
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void OutputDecisionHeader(Route fwdRoute, Route leftRoute, Route rightRoute, bool thereIsForwardRoute)
+    {
+        string header = "Comparing";
+        // if there is actually a comparison (two or more routes exist
+        if ((leftPeeked && rightPeeked)
+            || (leftPeeked && thereIsForwardRoute)
+            || (rightPeeked && thereIsForwardRoute))
+        {
+            if (leftPeeked)
+            {
+                header += " Left Route " + leftRoute.startSpot;
+            }
+            if (rightPeeked)
+            {
+                header += " Right Route " + rightRoute.startSpot;
+            }
+            if (thereIsForwardRoute)
+            {
+                header += " Forward Route " + fwdRoute.startSpot;
+            }
+            DecisionSaver.SaveDecision(decisionFileName, header);
+        }
+    }
     
+    private static void OutputComparisonReason(Route higherPriorityRoute, Route lowerPriorityRoute, string decisionVariable)
+    {
+        string reason = "Route " + higherPriorityRoute.startSpot + " is higher priority than Route "
+            + lowerPriorityRoute.startSpot + " because " + decisionVariable;
+        DecisionSaver.SaveDecision(decisionFileName, reason);
+    }
 }

@@ -1,0 +1,42 @@
+Comparing Left Route (-2.1, 1.5, 5.0) Right Route (2.1, 1.5, 5.0)
+Route (-2.1, 1.5, 5.0) is higher priority than Route (2.1, 1.5, 5.0) because the first route is shorter than the second
+The highest priority Route is (-2.1, 1.5, 5.0)
+
+
+Comparing Left Route (-31.5, 1.5, 2.9) Right Route (-31.5, 1.5, 7.1)
+Route (-31.5, 1.5, 7.1) is higher priority than Route (-31.5, 1.5, 2.9) because it was a random decision
+The highest priority Route is (-31.5, 1.5, 7.1)
+
+
+Comparing Right Route (-63.0, 1.5, 40.5) Forward Route (-67.1, 1.1, 36.6)
+Route (-67.1, 1.1, 36.6) is higher priority than Route (-63.0, 1.5, 40.5) because the first route is more straight than the second
+The highest priority Route is (-67.1, 1.1, 36.6)
+
+
+Comparing Left Route (-96.7, 1.5, 68.0) Right Route (-92.4, 1.5, 68.0)
+Route (-96.7, 1.5, 68.0) is higher priority than Route (-92.4, 1.5, 68.0) because the first route is the only route with a window
+The highest priority Route is (-96.7, 1.5, 68.0)
+
+
+Comparing Right Route (-126.1, 1.5, 72.0) Forward Route (-130.2, 1.1, 68.0)
+Route (-130.2, 1.1, 68.0) is higher priority than Route (-126.1, 1.5, 72.0) because the first route is the only route with a window
+The highest priority Route is (-130.2, 1.1, 68.0)
+
+
+Comparing Left Route (-189.0, 1.5, 97.4) Right Route (-189.0, 1.5, 101.6)
+Route (-189.0, 1.5, 101.6) is higher priority than Route (-189.0, 1.5, 97.4) because the second route has a fire and the first does not
+The highest priority Route is (-189.0, 1.5, 101.6)
+
+
+Comparing Left Route (-220.6, 1.5, 126.9) Forward Route (-224.7, 1.1, 131.1)
+Route (-224.7, 1.1, 131.1) is higher priority than Route (-220.6, 1.5, 126.9) because is the only route with an exit
+The highest priority Route is (-224.7, 1.1, 131.1)
+
+
+Comparing Left Route (-252.1, 1.5, 126.9) Right Route (-252.1, 1.5, 135.1) Forward Route (-256.1, 1.1, 131.3)
+Route (-256.1, 1.1, 131.3) is higher priority than Route (-252.1, 1.5, 126.9) because the first route is more straight than the second
+Route (-256.1, 1.1, 131.3) is higher priority than Route (-252.1, 1.5, 135.1) because the first route is more straight than the second
+Route (-252.1, 1.5, 126.9) is higher priority than Route (-252.1, 1.5, 135.1) because it was a random decision
+The highest priority Route is (-256.1, 1.1, 131.3)
+
+

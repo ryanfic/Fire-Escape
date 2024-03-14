@@ -1,0 +1,34 @@
+Comparing Right Route (4.0, 1.5, 4.6) Forward Route (0.0, 0.6, 9.2)
+Route (0.0, 0.6, 9.2) is higher priority than Route (4.0, 1.5, 4.6) because the first route is more straight than the second
+The highest priority Route is (0.0, 0.6, 9.2)
+
+
+Comparing Right Route (4.0, 1.5, 28.5) Forward Route (0.0, 1.1, 33.1)
+Route (0.0, 1.1, 33.1) is higher priority than Route (4.0, 1.5, 28.5) because the first route is more straight than the second
+The highest priority Route is (0.0, 1.1, 33.1)
+
+
+Comparing Left Route (-2.1, 1.5, 39.0) Right Route (2.1, 1.5, 39.0)
+Route (-2.1, 1.5, 39.0) is higher priority than Route (2.1, 1.5, 39.0) because the first route is the only route with a window
+The highest priority Route is (-2.1, 1.5, 39.0)
+
+
+Comparing Right Route (-16.6, 1.5, 43.1) Forward Route (-20.7, 1.1, 39.6)
+Route (-20.7, 1.1, 39.6) is higher priority than Route (-16.6, 1.5, 43.1) because the first route is the only route with a window
+The highest priority Route is (-20.7, 1.1, 39.6)
+
+
+Comparing Left Route (-41.6, 1.5, 34.9) Right Route (-30.0, 1.5, 59.5) Forward Route (-45.7, 1.1, 40.5)
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-41.6, 1.5, 34.9) because the first route is the only route with a window
+Route (-45.7, 1.1, 40.5) is higher priority than Route (-30.0, 1.5, 59.5) because the first route is the only route with a window
+Route (-30.0, 1.5, 59.5) is higher priority than Route (-41.6, 1.5, 34.9) because it was a random decision
+The highest priority Route is (-45.7, 1.1, 40.5)
+
+
+Comparing Left Route (-83.1, 1.5, 34.9) Right Route (-91.3, 1.5, 41.9) Forward Route (-79.5, 1.1, 40.5)
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-79.5, 1.1, 40.5) because is the only route with an exit
+Route (-79.5, 1.1, 40.5) is higher priority than Route (-91.3, 1.5, 41.9) because the first route is the only route with a window
+Route (-83.1, 1.5, 34.9) is higher priority than Route (-91.3, 1.5, 41.9) because is the only route with an exit
+The highest priority Route is (-83.1, 1.5, 34.9)
+
+

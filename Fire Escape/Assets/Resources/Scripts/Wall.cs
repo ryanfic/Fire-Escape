@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Wall
 {
@@ -61,6 +59,11 @@ public class Wall
         return dir;
     }
 
+    public float getLength()
+    {
+        return Vector3.Distance(startPoint, endPoint);
+    }
+
     public float getGapAllowed(){
         return gapAllowed;
     }
@@ -101,7 +104,32 @@ public class Wall
         }
     }
 
-    
+    /*
+    Checks if a given point is within errorDistance of the wall (perpendicularly to the wall)
+    Assumes that height of point & wall does not matter
+
+    @param point the point to be checked
+    @param errorDistance the distance the point can be away from the wall and still be considered along it
+    @returns if the point is within errorDist of the wall
+ */
+    public bool isAlongWall(Vector3 point, float errorDistance)
+    {
+        //if the distance from the wall vector is less than the tolerable error distance
+        if (distPerpToWall(point) < errorDistance)
+        {
+            //the point is along the wall
+            return true;
+        }
+        //if the distance from the wall vector is greater than the tolerable error distance
+        else
+        {
+            //the point is not along the wall
+            return false;
+
+        }
+    }
+
+
     /*
         Checks the perpendicular distance of a point to the wall by calculating the distance the point is projected to be projected onto the wall
 
@@ -423,6 +451,42 @@ public class Wall
         else{
             return startPoint;
         }
+    }
+
+    public Vector3 directionBetweenWalls(Wall otherWall, Vector3 intendedDirection)
+    {
+        Vector3 resultDirection = intendedDirection;
+        if (otherWall != null) {
+            Vector3 thisWallDirection;
+            Vector3 otherWallDirection;
+            float angleBetweenThisWallAndIntended = Vector3.Angle(dir.normalized, intendedDirection.normalized);
+            // if this wall is facing away from the intended direction
+            if (angleBetweenThisWallAndIntended > 90)
+            {
+                // use the opposite direction
+                thisWallDirection = -dir;
+            }
+            else
+            {
+                thisWallDirection = dir;
+            }
+            thisWallDirection.y = 0;
+            float angleBetweenOtherWallAndIntended = Vector3.Angle(otherWall.dir.normalized, intendedDirection.normalized);
+            // if other wall is facing away from the intended direction
+            if (angleBetweenOtherWallAndIntended > 90)
+            {
+                // use the opposite direction
+                otherWallDirection = -otherWall.dir;
+            }
+            else
+            {
+                otherWallDirection = otherWall.dir;
+            }
+            otherWallDirection.y = 0;
+
+            resultDirection = (thisWallDirection + otherWallDirection).normalized;
+        }
+        return resultDirection;
     }
 
     /*

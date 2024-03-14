@@ -10,6 +10,7 @@ public class SimulationObjectLists : MonoBehaviour
     private List<GameObject> windowList = new List<GameObject>();
     private List<GameObject> wallList = new List<GameObject>();
     private List<GameObject> footprintList = new List<GameObject>();
+    private List<GameObject> destinationMarkerList = new List<GameObject>();
 
     /* void Update()
     {
@@ -55,6 +56,10 @@ public class SimulationObjectLists : MonoBehaviour
     public List<GameObject> getFootprintList()
     {
         return footprintList;
+    }
+    public List<GameObject> getDestinationMarkerList()
+    {
+        return destinationMarkerList;
     }
     public void addEvacuee(GameObject evacuee)
     {
@@ -186,5 +191,33 @@ public class SimulationObjectLists : MonoBehaviour
     public void clearFootprintList()
     {
         footprintList = new List<GameObject>();
+    }
+
+    public void addDestinationMarker(GameObject destinationMarker)
+    {
+        //check if the object to add is a destination marker by seeing if the object is on the destination marker layer
+        if (destinationMarker.layer == LayerMask.NameToLayer("DestinationMarker"))
+        {
+            //if the object is on the destination marker layer, add the object to the destination marker list
+            destinationMarkerList.Add(destinationMarker);
+        }
+    }
+    public void removeDestinationMarker(GameObject destinationMarker)
+    {
+        //check if the object to remove is a destination marker by seeing if the object is on the destination marker layer
+        if (destinationMarker.layer == LayerMask.NameToLayer("DestinationMarker"))
+        {
+            //if the object is on the destination marker layer, check if the object is on the destination marker list
+            if (destinationMarkerList.Contains(destinationMarker))
+            {
+                //if the destination marker is on the list, remove the destination marker
+                destinationMarkerList.Remove(destinationMarker);
+            }
+        }
+    }
+
+    public void clearDestinationMarker()
+    {
+        destinationMarkerList = new List<GameObject>();
     }
 }
