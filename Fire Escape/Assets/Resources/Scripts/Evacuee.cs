@@ -15,6 +15,8 @@ public class Evacuee : MonoBehaviour
     public FieldOfView fov;
     private SimulationObjectLists objLists;
 
+    public SmokeSmellDetector smokeSmellDetector;
+
     public float sensorAngle = 45f;
     public float sensorRadius = 150f;
     public bool familiar = false; //is the agent familiar to the building
@@ -164,6 +166,7 @@ public class Evacuee : MonoBehaviour
         }
     }
     void LateUpdate(){
+        //Debug.Log("smokeSmellDetector != null " + (smokeSmellDetector != null));
         if(!familiar){
             if(leftPeeking){
                 peek(true);
@@ -256,6 +259,39 @@ public class Evacuee : MonoBehaviour
                         destinations[destinations.Count-1] = findNextDestination();
                         Debug.Log("Next location.... " + destinations[destinations.Count-1]);
                         move(destinations[destinations.Count-1]);
+                    }
+                }
+                // If not moving to the start of a new path, but does smell smoke
+                else if (smokeSmellDetector != null && smokeSmellDetector.IsSmokeAboveThreshold())
+                {
+                    Debug.Log("Changing route due to smoke smell!");
+                    // do the same logic as finding the end of the path
+                    //if the previous route selection spot has another route
+                    if (prevSelectionSpot.nextRoute >= 0)
+                    {
+                        Debug.Log("Attempting another route");
+                        //move to the previous route's start
+                        movingToRouteStart = true;
+                        currentRoute = prevSelectionSpot.possibleRoutes[prevSelectionSpot.nextRoute];
+                        move(currentRoute.startSpot);
+                        prevSelectionSpot.nextRoute--;
+                    }
+                    //otherwise
+                    else
+                    {
+                        Debug.Log("TURNING AROUND");
+                        //turn around
+                        transform.rotation = Quaternion.LookRotation(-evaDir);
+                        evaDir = -evaDir;
+                        movingInLeftWallDir = !movingInLeftWallDir;
+                        movingInRightWallDir = !movingInRightWallDir;
+                        Wall temp = leftWall;
+                        leftWall = rightWall;
+                        rightWall = temp;
+
+                        //figure out where to move next
+                        destinations[destinations.Count - 1] = findNextDestination();
+                        move(destinations[destinations.Count - 1]);
                     }
                 }
                 else{

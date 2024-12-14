@@ -148,3 +148,1963 @@ Route (-83.1, 1.5, 34.9) is higher priority than Route (-91.3, 1.5, 41.9) becaus
 The highest priority Route is (-83.1, 1.5, 34.9)
 
 
+Comparing Left Route (-9.13, 1.50, -60.89) Forward Route (0.08, 0.74, -51.82)
+Route (0.08, 0.74, -51.82) is higher priority than Route (-9.13, 1.50, -60.89) because the second route has a fire and the first does not
+The highest priority Route is (0.08, 0.74, -51.82)
+
+
+Comparing Right Route (9.03, 1.50, -16.04) Forward Route (0.18, 0.57, -2.00)
+Route (0.18, 0.57, -2.00) is higher priority than Route (9.03, 1.50, -16.04) because the first route is more straight than the second
+The highest priority Route is (0.18, 0.57, -2.00)
+
+
+Comparing Left Route (-9.14, 1.50, -60.89) Forward Route (0.08, 0.74, -51.81)
+Route (0.08, 0.74, -51.81) is higher priority than Route (-9.14, 1.50, -60.89) because the second route has a fire and the first does not
+The highest priority Route is (0.08, 0.74, -51.81)
+
+
+Comparing Right Route (9.02, 1.50, -16.03) Forward Route (0.18, 0.57, -2.00)
+Route (0.18, 0.57, -2.00) is higher priority than Route (9.02, 1.50, -16.03) because the first route is more straight than the second
+The highest priority Route is (0.18, 0.57, -2.00)
+
+
+Comparing Left Route (-9.13, 1.50, -60.89) Forward Route (0.08, 0.74, -51.82)
+Route (0.08, 0.74, -51.82) is higher priority than Route (-9.13, 1.50, -60.89) because the second route has a fire and the first does not
+The highest priority Route is (0.08, 0.74, -51.82)
+
+
+Comparing Left Route (-9.14, 1.50, -60.89) Forward Route (0.08, 0.74, -51.81)
+Route (0.08, 0.74, -51.81) is higher priority than Route (-9.14, 1.50, -60.89) because the second route has a fire and the first does not
+The highest priority Route is (0.08, 0.74, -51.81)
+
+
+Comparing Right Route (9.02, 1.50, -16.02) Forward Route (0.18, 0.57, -2.00)
+Route (0.18, 0.57, -2.00) is higher priority than Route (9.02, 1.50, -16.02) because the first route is more straight than the second
+The highest priority Route is (0.18, 0.57, -2.00)
+
+
+Comparing Left Route (-9.13, 1.50, -60.90) Forward Route (0.08, 0.74, -51.82)
+Route (0.08, 0.74, -51.82) is higher priority than Route (-9.13, 1.50, -60.90) because the second route has a fire and the first does not
+The highest priority Route is (0.08, 0.74, -51.82)
+
+
+Comparing Left Route (-9.32, 1.50, -60.85) Forward Route (0.09, 0.74, -51.73)
+Route (0.09, 0.74, -51.73) is higher priority than Route (-9.32, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.73)
+
+
+Comparing Right Route (9.17, 1.50, -15.90) Forward Route (0.21, 0.57, -1.80)
+Route (0.21, 0.57, -1.80) is higher priority than Route (9.17, 1.50, -15.90) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.80)
+
+
+Comparing Right Route (4.78, 1.50, 39.00) Forward Route (0.27, 1.02, 30.85)
+Route (0.27, 1.02, 30.85) is higher priority than Route (4.78, 1.50, 39.00) because the first route is more straight than the second
+The highest priority Route is (0.27, 1.02, 30.85)
+
+
+Comparing Left Route (-9.29, 1.50, -60.87) Forward Route (0.09, 0.74, -51.77)
+Route (0.09, 0.74, -51.77) is higher priority than Route (-9.29, 1.50, -60.87) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.77)
+
+
+Comparing Right Route (9.08, 1.50, -15.89) Forward Route (0.21, 0.57, -1.78)
+Route (0.21, 0.57, -1.78) is higher priority than Route (9.08, 1.50, -15.89) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.78)
+
+
+Comparing Left Route (-9.31, 1.50, -60.86) Forward Route (0.09, 0.74, -51.74)
+Route (0.09, 0.74, -51.74) is higher priority than Route (-9.31, 1.50, -60.86) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.74)
+
+
+Comparing Right Route (9.14, 1.50, -15.83) Forward Route (0.21, 0.57, -1.66)
+Route (0.21, 0.57, -1.66) is higher priority than Route (9.14, 1.50, -15.83) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.66)
+
+
+Comparing Left Route (-9.32, 1.50, -60.86) Forward Route (0.10, 0.74, -51.74)
+Route (0.10, 0.74, -51.74) is higher priority than Route (-9.32, 1.50, -60.86) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.74)
+
+
+Comparing Right Route (9.03, 1.50, -16.03) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.03, 1.50, -16.03) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Left Route (-9.32, 1.50, -60.85) Forward Route (0.10, 0.74, -51.72)
+Route (0.10, 0.74, -51.72) is higher priority than Route (-9.32, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.72)
+
+
+Comparing Right Route (9.16, 1.50, -15.87) Forward Route (0.21, 0.57, -1.74)
+Route (0.21, 0.57, -1.74) is higher priority than Route (9.16, 1.50, -15.87) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.74)
+
+
+Comparing Left Route (-9.31, 1.50, -60.86) Forward Route (0.09, 0.74, -51.75)
+Route (0.09, 0.74, -51.75) is higher priority than Route (-9.31, 1.50, -60.86) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.75)
+
+
+Comparing Right Route (9.00, 1.50, -15.99) Forward Route (0.21, 0.57, -1.94)
+Route (0.21, 0.57, -1.94) is higher priority than Route (9.00, 1.50, -15.99) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.94)
+
+
+Comparing Left Route (-9.31, 1.50, -60.85) Forward Route (0.10, 0.74, -51.74)
+Route (0.10, 0.74, -51.74) is higher priority than Route (-9.31, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.74)
+
+
+Comparing Right Route (9.00, 1.50, -15.87) Forward Route (0.21, 0.57, -1.67)
+Route (0.21, 0.57, -1.67) is higher priority than Route (9.00, 1.50, -15.87) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.67)
+
+
+Comparing Left Route (-9.34, 1.50, -60.84) Forward Route (0.10, 0.74, -51.71)
+Route (0.10, 0.74, -51.71) is higher priority than Route (-9.34, 1.50, -60.84) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.71)
+
+
+Comparing Right Route (9.01, 1.50, -16.01) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.01, 1.50, -16.01) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Left Route (-9.31, 1.50, -60.85) Forward Route (0.10, 0.74, -51.74)
+Route (0.10, 0.74, -51.74) is higher priority than Route (-9.31, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.74)
+
+
+Comparing Right Route (9.04, 1.50, -16.04) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.04, 1.50, -16.04) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Left Route (-9.35, 1.50, -60.83) Forward Route (0.09, 0.74, -51.69)
+Route (0.09, 0.74, -51.69) is higher priority than Route (-9.35, 1.50, -60.83) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.69)
+
+
+Comparing Right Route (9.04, 1.50, -16.02) Forward Route (0.22, 0.57, -2.00)
+Route (0.22, 0.57, -2.00) is higher priority than Route (9.04, 1.50, -16.02) because the first route is more straight than the second
+The highest priority Route is (0.22, 0.57, -2.00)
+
+
+Comparing Right Route (41.33, 1.50, -44.00) Forward Route (58.77, 1.02, -16.02)
+Route (41.33, 1.50, -44.00) is higher priority than Route (58.77, 1.02, -16.02) because is the only route with an exit
+The highest priority Route is (41.33, 1.50, -44.00)
+
+
+Comparing Right Route (4.00, 1.50, 4.53) Forward Route (0.00, 0.60, 9.06)
+Route (0.00, 0.60, 9.06) is higher priority than Route (4.00, 1.50, 4.53) because the first route is more straight than the second
+The highest priority Route is (0.00, 0.60, 9.06)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.93) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.93) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Left Route (18.62, 1.50, 53.50) Right Route (23.07, 1.50, 53.50)
+Route (23.07, 1.50, 53.50) is higher priority than Route (18.62, 1.50, 53.50) because the first route is shorter than the second
+The highest priority Route is (23.07, 1.50, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.79, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.92) Forward Route (20.97, 1.08, 47.69)
+Route (20.97, 1.08, 47.69) is higher priority than Route (24.75, 1.50, 42.92) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.69)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (23.06, 1.50, 53.50)
+Route (23.06, 1.50, 53.50) is higher priority than Route (18.73, 1.50, 53.50) because the first route is shorter than the second
+The highest priority Route is (23.06, 1.50, 53.50)
+
+
+Comparing Right Route (24.82, 1.50, 13.73) Forward Route (20.81, 0.91, 18.46)
+Route (20.81, 0.91, 18.46) is higher priority than Route (24.82, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.46)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.73)
+Route (20.97, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.73)
+
+
+Comparing Left Route (18.62, 1.50, 53.50) Right Route (23.15, 1.50, 53.50)
+Route (18.62, 1.50, 53.50) is higher priority than Route (23.15, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.62, 1.50, 53.50)
+
+
+Comparing Right Route (24.75, 1.50, 13.67) Forward Route (20.81, 0.90, 18.43)
+Route (20.81, 0.90, 18.43) is higher priority than Route (24.75, 1.50, 13.67) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.90, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.95) Forward Route (20.97, 1.08, 47.72)
+Route (20.97, 1.08, 47.72) is higher priority than Route (24.75, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.72)
+
+
+Comparing Left Route (18.72, 1.50, 53.50) Right Route (23.06, 1.50, 53.50)
+Route (18.72, 1.50, 53.50) is higher priority than Route (23.06, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.72, 1.50, 53.50)
+
+
+Comparing Right Route (3.10, 1.50, 57.53) Forward Route (-1.81, 1.08, 53.50)
+Route (-1.81, 1.08, 53.50) is higher priority than Route (3.10, 1.50, 57.53) because the first route is the only route with a window
+The highest priority Route is (-1.81, 1.08, 53.50)
+
+
+Comparing Left Route (-16.61, 1.50, 25.14) Right Route (-20.84, 1.50, 57.56) Forward Route (-24.99, 1.08, 53.50)
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-16.61, 1.50, 25.14) because the first route is the only route with a window
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-20.84, 1.50, 57.56) because the first route is the only route with a window
+Route (-20.84, 1.50, 57.56) is higher priority than Route (-16.61, 1.50, 25.14) because the first route is shorter than the second
+The highest priority Route is (-24.99, 1.08, 53.50)
+
+
+Comparing Left Route (-89.63, 1.50, 25.11) Right Route (-93.75, 1.50, 55.57) Forward Route (-88.74, 1.08, 53.50)
+Route (-88.74, 1.08, 53.50) is higher priority than Route (-89.63, 1.50, 25.11) because the first route is the only route with a window
+Route (-88.74, 1.08, 53.50) is higher priority than Route (-93.75, 1.50, 55.57) because the second route has a fire and the first does not
+Route (-89.63, 1.50, 25.11) is higher priority than Route (-93.75, 1.50, 55.57) because the second route has a fire and the first does not
+The highest priority Route is (-88.74, 1.08, 53.50)
+
+
+Comparing Left Route (-89.63, 1.50, 13.13) Forward Route (-89.83, 1.08, 53.50)
+Route (-89.63, 1.50, 13.13) is higher priority than Route (-89.83, 1.08, 53.50) because the second route has a fire and the first does not
+The highest priority Route is (-89.63, 1.50, 13.13)
+
+
+Comparing Right Route (24.88, 1.50, 13.69) Forward Route (20.78, 0.90, 18.39)
+Route (20.78, 0.90, 18.39) is higher priority than Route (24.88, 1.50, 13.69) because the first route is more straight than the second
+The highest priority Route is (20.78, 0.90, 18.39)
+
+
+Comparing Right Route (24.75, 1.50, 42.92) Forward Route (21.00, 1.08, 47.67)
+Route (21.00, 1.08, 47.67) is higher priority than Route (24.75, 1.50, 42.92) because the first route is more straight than the second
+The highest priority Route is (21.00, 1.08, 47.67)
+
+
+Comparing Left Route (18.76, 1.50, 53.50) Right Route (23.09, 1.50, 53.50)
+Route (18.76, 1.50, 53.50) is higher priority than Route (23.09, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.76, 1.50, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.93) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.93) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Left Route (18.62, 1.50, 53.50) Right Route (23.15, 1.50, 53.50)
+Route (18.62, 1.50, 53.50) is higher priority than Route (23.15, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.62, 1.50, 53.50)
+
+
+Comparing Right Route (3.08, 1.50, 57.56) Forward Route (-1.84, 1.08, 53.50)
+Route (-1.84, 1.08, 53.50) is higher priority than Route (3.08, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.84, 1.08, 53.50)
+
+
+Comparing Left Route (-16.60, 1.50, 25.16) Right Route (-20.84, 1.50, 57.56) Forward Route (-24.99, 1.08, 53.50)
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-16.60, 1.50, 25.16) because the first route is the only route with a window
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-20.84, 1.50, 57.56) because the first route is the only route with a window
+Route (-20.84, 1.50, 57.56) is higher priority than Route (-16.60, 1.50, 25.16) because the first route is shorter than the second
+The highest priority Route is (-24.99, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.76) Forward Route (20.81, 0.91, 18.52)
+Route (20.81, 0.91, 18.52) is higher priority than Route (24.80, 1.50, 13.76) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.52)
+
+
+Comparing Right Route (24.82, 1.50, 43.00) Forward Route (20.97, 1.08, 47.78)
+Route (20.97, 1.08, 47.78) is higher priority than Route (24.82, 1.50, 43.00) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.78)
+
+
+Comparing Left Route (18.65, 1.50, 53.50) Right Route (22.96, 1.50, 53.50)
+Route (18.65, 1.50, 53.50) is higher priority than Route (22.96, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.65, 1.50, 53.50)
+
+
+Comparing Right Route (3.02, 1.50, 57.57) Forward Route (-1.95, 1.08, 53.50)
+Route (-1.95, 1.08, 53.50) is higher priority than Route (3.02, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.95, 1.08, 53.50)
+
+
+Comparing Left Route (-20.90, 1.50, 25.11) Right Route (-20.92, 1.50, 57.51) Forward Route (-24.79, 1.08, 53.50)
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.90, 1.50, 25.11) because the first route is the only route with a window
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.92, 1.50, 57.51) because the first route is the only route with a window
+Route (-20.92, 1.50, 57.51) is higher priority than Route (-20.90, 1.50, 25.11) because the first route is shorter than the second
+The highest priority Route is (-24.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.79, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.83, 1.50, 42.99) Forward Route (20.97, 1.08, 47.76)
+Route (20.97, 1.08, 47.76) is higher priority than Route (24.83, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.76)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.97, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.97, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.57) Forward Route (-1.91, 1.08, 53.50)
+Route (-1.91, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.91, 1.08, 53.50)
+
+
+Comparing Left Route (-20.83, 1.50, 37.24) Right Route (-20.89, 1.50, 57.51) Forward Route (-24.79, 1.08, 53.50)
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.83, 1.50, 37.24) because the first route is the only route with a window
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.89, 1.50, 57.51) because the first route is the only route with a window
+Route (-20.89, 1.50, 57.51) is higher priority than Route (-20.83, 1.50, 37.24) because the first route is shorter than the second
+The highest priority Route is (-24.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.93) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.93) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Left Route (18.72, 1.50, 53.50) Right Route (23.06, 1.50, 53.50)
+Route (18.72, 1.50, 53.50) is higher priority than Route (23.06, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.72, 1.50, 53.50)
+
+
+Comparing Right Route (3.10, 1.50, 57.53) Forward Route (-1.81, 1.08, 53.50)
+Route (-1.81, 1.08, 53.50) is higher priority than Route (3.10, 1.50, 57.53) because the first route is the only route with a window
+The highest priority Route is (-1.81, 1.08, 53.50)
+
+
+Comparing Left Route (-16.58, 1.50, 25.16) Right Route (-20.84, 1.50, 57.56) Forward Route (-24.99, 1.08, 53.50)
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-16.58, 1.50, 25.16) because the first route is the only route with a window
+Route (-24.99, 1.08, 53.50) is higher priority than Route (-20.84, 1.50, 57.56) because the first route is the only route with a window
+Route (-20.84, 1.50, 57.56) is higher priority than Route (-16.58, 1.50, 25.16) because the first route is shorter than the second
+The highest priority Route is (-24.99, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.73) Forward Route (20.81, 0.91, 18.46)
+Route (20.81, 0.91, 18.46) is higher priority than Route (24.79, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.46)
+
+
+Comparing Right Route (24.75, 1.50, 42.95) Forward Route (20.97, 1.08, 47.66)
+Route (20.97, 1.08, 47.66) is higher priority than Route (24.75, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.66)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.51) Forward Route (-1.88, 1.08, 53.50)
+Route (-1.88, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.51) because the first route is the only route with a window
+The highest priority Route is (-1.88, 1.08, 53.50)
+
+
+Comparing Left Route (-20.85, 1.50, 49.36) Right Route (-20.87, 1.50, 57.57) Forward Route (-24.79, 1.08, 53.50)
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.85, 1.50, 49.36) because the first route is the only route with a window
+Route (-24.79, 1.08, 53.50) is higher priority than Route (-20.87, 1.50, 57.57) because the first route is the only route with a window
+Route (-20.87, 1.50, 57.57) is higher priority than Route (-20.85, 1.50, 49.36) because the first route is shorter than the second
+The highest priority Route is (-24.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.75, 1.50, 13.65) Forward Route (20.81, 0.90, 18.41)
+Route (20.81, 0.90, 18.41) is higher priority than Route (24.75, 1.50, 13.65) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.90, 18.41)
+
+
+Comparing Right Route (24.75, 1.50, 42.95) Forward Route (20.97, 1.08, 47.72)
+Route (20.97, 1.08, 47.72) is higher priority than Route (24.75, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.72)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.51) Forward Route (-1.87, 1.08, 53.50)
+Route (-1.87, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.51) because the first route is the only route with a window
+The highest priority Route is (-1.87, 1.08, 53.50)
+
+
+Comparing Left Route (-20.85, 1.50, 49.39) Right Route (-20.37, 1.50, 57.57) Forward Route (-23.79, 1.08, 53.50)
+Route (-23.79, 1.08, 53.50) is higher priority than Route (-20.85, 1.50, 49.39) because the first route is the only route with a window
+Route (-23.79, 1.08, 53.50) is higher priority than Route (-20.37, 1.50, 57.57) because the first route is the only route with a window
+Route (-20.37, 1.50, 57.57) is higher priority than Route (-20.85, 1.50, 49.39) because the first route is shorter than the second
+The highest priority Route is (-23.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (20.81, 0.91, 18.45) is higher priority than Route (24.79, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.45)
+
+
+Comparing Right Route (24.82, 1.50, 42.99) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.82, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.98, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.98, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.51) Forward Route (-1.88, 1.08, 53.50)
+Route (-1.88, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.51) because the first route is the only route with a window
+The highest priority Route is (-1.88, 1.08, 53.50)
+
+
+Comparing Left Route (-20.84, 1.50, 49.40) Right Route (-32.07, 1.50, 68.57) Forward Route (-25.79, 1.08, 53.50)
+Route (-25.79, 1.08, 53.50) is higher priority than Route (-20.84, 1.50, 49.40) because the first route is the only route with a window
+Route (-25.79, 1.08, 53.50) is higher priority than Route (-32.07, 1.50, 68.57) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.57) is higher priority than Route (-20.84, 1.50, 49.40) because the first route is shorter than the second
+The highest priority Route is (-25.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.71) Forward Route (20.81, 0.91, 18.42)
+Route (20.81, 0.91, 18.42) is higher priority than Route (24.79, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.42)
+
+
+Comparing Right Route (24.75, 1.50, 42.92) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.92) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Left Route (18.72, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.72, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.72, 1.50, 53.50)
+
+
+Comparing Right Route (3.10, 1.50, 57.52) Forward Route (-1.80, 1.08, 53.50)
+Route (-1.80, 1.08, 53.50) is higher priority than Route (3.10, 1.50, 57.52) because the first route is the only route with a window
+The highest priority Route is (-1.80, 1.08, 53.50)
+
+
+Comparing Left Route (-16.64, 1.50, 25.17) Right Route (-32.07, 1.50, 68.51) Forward Route (-25.93, 1.08, 53.50)
+Route (-25.93, 1.08, 53.50) is higher priority than Route (-16.64, 1.50, 25.17) because the first route is the only route with a window
+Route (-25.93, 1.08, 53.50) is higher priority than Route (-32.07, 1.50, 68.51) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.51) is higher priority than Route (-16.64, 1.50, 25.17) because the first route is shorter than the second
+The highest priority Route is (-25.93, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.79, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.92) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.92) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Left Route (18.63, 1.50, 53.50) Right Route (23.06, 1.50, 53.50)
+Route (18.63, 1.50, 53.50) is higher priority than Route (23.06, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.63, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.57) Forward Route (-1.86, 1.08, 53.50)
+Route (-1.86, 1.08, 53.50) is higher priority than Route (3.07, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.86, 1.08, 53.50)
+
+
+Comparing Left Route (-16.65, 1.50, 25.13) Right Route (-32.07, 1.50, 68.53) Forward Route (-25.98, 1.08, 53.50)
+Route (-25.98, 1.08, 53.50) is higher priority than Route (-16.65, 1.50, 25.13) because the first route is the only route with a window
+Route (-25.98, 1.08, 53.50) is higher priority than Route (-32.07, 1.50, 68.53) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.53) is higher priority than Route (-16.65, 1.50, 25.13) because the first route is shorter than the second
+The highest priority Route is (-25.98, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.71) Forward Route (20.81, 0.91, 18.42)
+Route (20.81, 0.91, 18.42) is higher priority than Route (24.79, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.42)
+
+
+Comparing Right Route (24.75, 1.50, 42.92) Forward Route (20.97, 1.08, 47.69)
+Route (20.97, 1.08, 47.69) is higher priority than Route (24.75, 1.50, 42.92) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.69)
+
+
+Comparing Left Route (18.62, 1.50, 53.50) Right Route (23.06, 1.50, 53.50)
+Route (18.62, 1.50, 53.50) is higher priority than Route (23.06, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.62, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.57) Forward Route (-1.85, 1.08, 53.50)
+Route (-1.85, 1.08, 53.50) is higher priority than Route (3.07, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.85, 1.08, 53.50)
+
+
+Comparing Left Route (-16.63, 1.50, 25.14) Right Route (-32.07, 1.50, 68.52) Forward Route (-25.96, 1.08, 53.50)
+Route (-25.96, 1.08, 53.50) is higher priority than Route (-16.63, 1.50, 25.14) because the first route is the only route with a window
+Route (-25.96, 1.08, 53.50) is higher priority than Route (-32.07, 1.50, 68.52) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.52) is higher priority than Route (-16.63, 1.50, 25.14) because the first route is shorter than the second
+The highest priority Route is (-25.96, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.74) Forward Route (20.81, 0.91, 18.49)
+Route (20.81, 0.91, 18.49) is higher priority than Route (24.80, 1.50, 13.74) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.49)
+
+
+Comparing Right Route (24.75, 1.50, 43.00) Forward Route (20.97, 1.08, 47.78)
+Route (20.97, 1.08, 47.78) is higher priority than Route (24.75, 1.50, 43.00) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.78)
+
+
+Comparing Left Route (18.76, 1.50, 53.50) Right Route (23.03, 1.50, 53.50)
+Route (18.76, 1.50, 53.50) is higher priority than Route (23.03, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.76, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.59) Forward Route (-1.94, 1.08, 53.53)
+Route (-1.94, 1.08, 53.53) is higher priority than Route (3.03, 1.50, 57.59) because the first route is the only route with a window
+The highest priority Route is (-1.94, 1.08, 53.53)
+
+
+Comparing Left Route (-20.89, 1.50, 25.16) Right Route (-32.07, 1.50, 68.37) Forward Route (-25.79, 1.08, 53.53)
+Route (-25.79, 1.08, 53.53) is higher priority than Route (-20.89, 1.50, 25.16) because the first route is the only route with a window
+Route (-25.79, 1.08, 53.53) is higher priority than Route (-32.07, 1.50, 68.37) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.37) is higher priority than Route (-20.89, 1.50, 25.16) because the first route is shorter than the second
+The highest priority Route is (-25.79, 1.08, 53.53)
+
+
+Comparing Right Route (24.82, 1.50, 13.75) Forward Route (20.81, 0.91, 18.51)
+Route (20.81, 0.91, 18.51) is higher priority than Route (24.82, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.51)
+
+
+Comparing Right Route (24.78, 1.50, 43.00) Forward Route (20.97, 1.08, 47.78)
+Route (20.97, 1.08, 47.78) is higher priority than Route (24.78, 1.50, 43.00) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.78)
+
+
+Comparing Left Route (18.75, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.75, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.75, 1.50, 53.50)
+
+
+Comparing Right Route (3.02, 1.50, 57.58) Forward Route (-1.96, 1.08, 53.50)
+Route (-1.96, 1.08, 53.50) is higher priority than Route (3.02, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.96, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 25.12) Right Route (-32.07, 1.50, 68.27) Forward Route (-25.79, 1.08, 53.50)
+Route (-25.79, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 25.12) because the first route is the only route with a window
+Route (-25.79, 1.08, 53.50) is higher priority than Route (-32.07, 1.50, 68.27) because the first route is the only route with a window
+Route (-32.07, 1.50, 68.27) is higher priority than Route (-20.88, 1.50, 25.12) because the first route is shorter than the second
+The highest priority Route is (-25.79, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.51)
+Route (20.81, 0.91, 18.51) is higher priority than Route (24.79, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.51)
+
+
+Comparing Right Route (24.82, 1.50, 43.00) Forward Route (20.97, 1.08, 47.78)
+Route (20.97, 1.08, 47.78) is higher priority than Route (24.82, 1.50, 43.00) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.78)
+
+
+Comparing Left Route (18.75, 1.50, 53.50) Right Route (22.96, 1.50, 53.50)
+Route (18.75, 1.50, 53.50) is higher priority than Route (22.96, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.75, 1.50, 53.50)
+
+
+Comparing Right Route (3.02, 1.50, 57.58) Forward Route (-1.96, 1.08, 53.50)
+Route (-1.96, 1.08, 53.50) is higher priority than Route (3.02, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.96, 1.08, 53.50)
+
+
+Comparing Left Route (-20.90, 1.50, 25.17) Forward Route (-25.02, 1.08, 53.50)
+Route (-25.02, 1.08, 53.50) is higher priority than Route (-20.90, 1.50, 25.17) because the first route is the only route with a window
+The highest priority Route is (-25.02, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.99) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.96, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.96, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.57) Forward Route (-1.91, 1.08, 53.50)
+Route (-1.91, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.91, 1.08, 53.50)
+
+
+Comparing Left Route (-20.85, 1.50, 25.18) Forward Route (-24.98, 1.08, 53.50)
+Route (-24.98, 1.08, 53.50) is higher priority than Route (-20.85, 1.50, 25.18) because the first route is the only route with a window
+The highest priority Route is (-24.98, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.73) Forward Route (20.81, 0.91, 18.46)
+Route (20.81, 0.91, 18.46) is higher priority than Route (24.80, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.46)
+
+
+Comparing Right Route (24.76, 1.50, 42.95) Forward Route (20.97, 1.08, 47.67)
+Route (20.97, 1.08, 47.67) is higher priority than Route (24.76, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.67)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.11, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.11, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.52) Forward Route (-1.89, 1.08, 53.50)
+Route (-1.89, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.52) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.50)
+
+
+Comparing Left Route (-16.62, 1.50, 25.18) Forward Route (-24.95, 1.08, 53.50)
+Route (-24.95, 1.08, 53.50) is higher priority than Route (-16.62, 1.50, 25.18) because the first route is the only route with a window
+The highest priority Route is (-24.95, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.72) Forward Route (20.81, 0.91, 18.46)
+Route (20.81, 0.91, 18.46) is higher priority than Route (24.79, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.46)
+
+
+Comparing Right Route (24.83, 1.50, 42.99) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.83, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.75, 1.50, 53.50) Right Route (23.12, 1.50, 53.50)
+Route (18.75, 1.50, 53.50) is higher priority than Route (23.12, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.75, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.57) Forward Route (-1.95, 1.08, 53.50)
+Route (-1.95, 1.08, 53.50) is higher priority than Route (3.03, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.95, 1.08, 53.50)
+
+
+Comparing Left Route (-20.85, 1.50, 25.17) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.85, 1.50, 25.17) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.74) Forward Route (20.81, 0.91, 18.49)
+Route (20.81, 0.91, 18.49) is higher priority than Route (24.80, 1.50, 13.74) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.49)
+
+
+Comparing Right Route (24.75, 1.50, 43.00) Forward Route (20.97, 1.08, 47.78)
+Route (20.97, 1.08, 47.78) is higher priority than Route (24.75, 1.50, 43.00) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.78)
+
+
+Comparing Left Route (18.75, 1.50, 53.50) Right Route (23.02, 1.50, 53.50)
+Route (18.75, 1.50, 53.50) is higher priority than Route (23.02, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.75, 1.50, 53.50)
+
+
+Comparing Right Route (3.02, 1.50, 57.57) Forward Route (-1.95, 1.08, 53.50)
+Route (-1.95, 1.08, 53.50) is higher priority than Route (3.02, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.95, 1.08, 53.50)
+
+
+Comparing Left Route (-20.90, 1.50, 25.17) Forward Route (-25.02, 1.08, 53.50)
+Route (-25.02, 1.08, 53.50) is higher priority than Route (-20.90, 1.50, 25.17) because the first route is the only route with a window
+The highest priority Route is (-25.02, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.73) Forward Route (20.81, 0.91, 18.47)
+Route (20.81, 0.91, 18.47) is higher priority than Route (24.79, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.47)
+
+
+Comparing Right Route (24.75, 1.50, 42.99) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.02, 1.50, 57.56) Forward Route (-1.95, 1.08, 53.50)
+Route (-1.95, 1.08, 53.50) is higher priority than Route (3.02, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.95, 1.08, 53.50)
+
+
+Comparing Left Route (-20.85, 1.50, 25.17) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.85, 1.50, 25.17) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.73)
+Route (20.97, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.73)
+
+
+Comparing Left Route (18.64, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.64, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.64, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.56) Forward Route (-1.92, 1.08, 53.50)
+Route (-1.92, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.92, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.73)
+Route (20.97, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.73)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (23.12, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (23.12, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.55) Forward Route (-1.91, 1.08, 53.50)
+Route (-1.91, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.55) because the first route is the only route with a window
+The highest priority Route is (-1.91, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.32) Right Route (-93.75, 1.50, 55.59)
+Route (-93.75, 1.50, 51.32) is higher priority than Route (-93.75, 1.50, 55.59) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.32)
+
+
+Comparing Left Route (-89.61, 1.50, 29.76) Forward Route (-93.77, 1.08, 25.02)
+Route (-93.77, 1.08, 25.02) is higher priority than Route (-89.61, 1.50, 29.76) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 25.02)
+
+
+Comparing Left Route (-89.60, 1.50, 5.52) Forward Route (-93.77, 1.08, 0.79)
+Route (-93.77, 1.08, 0.79) is higher priority than Route (-89.60, 1.50, 5.52) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 0.79)
+
+
+Comparing Left Route (-20.61, 1.50, -0.91) Forward Route (-16.75, 1.08, -4.98)
+Route (-16.75, 1.08, -4.98) is higher priority than Route (-20.61, 1.50, -0.91) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -4.98)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.71)
+Route (20.97, 1.08, 47.71) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.71)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.97, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.97, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.57) Forward Route (-1.93, 1.08, 53.50)
+Route (-1.93, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.28) Right Route (-93.75, 1.50, 55.54)
+Route (-93.75, 1.50, 51.28) is higher priority than Route (-93.75, 1.50, 55.54) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.28)
+
+
+Comparing Left Route (-89.67, 1.50, 29.75) Forward Route (-93.75, 1.08, 25.00)
+Route (-93.75, 1.08, 25.00) is higher priority than Route (-89.67, 1.50, 29.75) because the first route is more straight than the second
+The highest priority Route is (-93.75, 1.08, 25.00)
+
+
+Comparing Left Route (-89.67, 1.50, 5.54) Forward Route (-93.75, 1.08, 0.82)
+Route (-93.75, 1.08, 0.82) is higher priority than Route (-89.67, 1.50, 5.54) because the first route is more straight than the second
+The highest priority Route is (-93.75, 1.08, 0.82)
+
+
+Comparing Left Route (-20.60, 1.50, -0.91) Forward Route (-16.75, 1.08, -4.97)
+Route (-16.75, 1.08, -4.97) is higher priority than Route (-20.60, 1.50, -0.91) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -4.97)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (20.81, 0.91, 18.45) is higher priority than Route (24.81, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.45)
+
+
+Comparing Right Route (24.75, 1.50, 42.98) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.54) Forward Route (-1.89, 1.08, 53.50)
+Route (-1.89, 1.08, 53.50) is higher priority than Route (3.05, 1.50, 57.54) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.41) Right Route (-93.75, 1.50, 55.58)
+Route (-93.75, 1.50, 51.41) is higher priority than Route (-93.75, 1.50, 55.58) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.41)
+
+
+Comparing Left Route (-89.61, 1.50, 29.76) Forward Route (-93.77, 1.08, 25.02)
+Route (-93.77, 1.08, 25.02) is higher priority than Route (-89.61, 1.50, 29.76) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 25.02)
+
+
+Comparing Left Route (-89.68, 1.50, 5.52) Forward Route (-93.77, 1.08, 0.80)
+Route (-93.77, 1.08, 0.80) is higher priority than Route (-89.68, 1.50, 5.52) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 0.80)
+
+
+Comparing Left Route (-20.59, 1.50, -0.91) Forward Route (-16.75, 1.08, -4.97)
+Route (-16.75, 1.08, -4.97) is higher priority than Route (-20.59, 1.50, -0.91) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -4.97)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.76, 1.50, 42.97) Forward Route (20.97, 1.08, 47.71)
+Route (20.97, 1.08, 47.71) is higher priority than Route (24.76, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.71)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.79, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.57) Forward Route (-1.94, 1.08, 53.50)
+Route (-1.94, 1.08, 53.50) is higher priority than Route (3.03, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.94, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.54) Forward Route (-1.90, 1.08, 53.50)
+Route (-1.90, 1.08, 53.50) is higher priority than Route (3.05, 1.50, 57.54) because the first route is the only route with a window
+The highest priority Route is (-1.90, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.32) Right Route (-93.75, 1.50, 55.59)
+Route (-93.75, 1.50, 51.32) is higher priority than Route (-93.75, 1.50, 55.59) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.32)
+
+
+Comparing Left Route (-89.61, 1.50, 29.75) Forward Route (-93.77, 1.08, 25.01)
+Route (-93.77, 1.08, 25.01) is higher priority than Route (-89.61, 1.50, 29.75) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 25.01)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.97, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.97, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.58) Forward Route (-1.87, 1.08, 53.50)
+Route (-1.87, 1.08, 53.50) is higher priority than Route (3.07, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.87, 1.08, 53.50)
+
+
+Comparing Left Route (-20.87, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.87, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (22.98, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (22.98, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.58) Forward Route (-1.87, 1.08, 53.50)
+Route (-1.87, 1.08, 53.50) is higher priority than Route (3.07, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.87, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.73)
+Route (20.97, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.73)
+
+
+Comparing Left Route (18.64, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.64, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.64, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.56) Forward Route (-1.92, 1.08, 53.50)
+Route (-1.92, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.92, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.82, 1.50, 13.73) Forward Route (20.81, 0.91, 18.46)
+Route (20.81, 0.91, 18.46) is higher priority than Route (24.82, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.46)
+
+
+Comparing Right Route (24.75, 1.50, 42.98) Forward Route (20.97, 1.08, 47.76)
+Route (20.97, 1.08, 47.76) is higher priority than Route (24.75, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.76)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.12, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.12, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.57) Forward Route (-1.94, 1.08, 53.50)
+Route (-1.94, 1.08, 53.50) is higher priority than Route (3.03, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.94, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.57) Forward Route (-1.93, 1.08, 53.50)
+Route (-1.93, 1.08, 53.50) is higher priority than Route (3.03, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.41) Right Route (-93.75, 1.50, 55.58)
+Route (-93.75, 1.50, 51.41) is higher priority than Route (-93.75, 1.50, 55.58) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.41)
+
+
+Comparing Left Route (-89.60, 1.50, 29.76) Forward Route (-93.76, 1.08, 25.02)
+Route (-93.76, 1.08, 25.02) is higher priority than Route (-89.60, 1.50, 29.76) because the first route is more straight than the second
+The highest priority Route is (-93.76, 1.08, 25.02)
+
+
+Comparing Left Route (-89.68, 1.50, 5.53) Forward Route (-93.76, 1.08, 0.80)
+Route (-93.76, 1.08, 0.80) is higher priority than Route (-89.68, 1.50, 5.53) because the first route is more straight than the second
+The highest priority Route is (-93.76, 1.08, 0.80)
+
+
+Comparing Left Route (-20.60, 1.50, -0.91) Forward Route (-16.75, 1.08, -4.97)
+Route (-16.75, 1.08, -4.97) is higher priority than Route (-20.60, 1.50, -0.91) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -4.97)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (22.97, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (22.97, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.57) Forward Route (-1.93, 1.08, 53.50)
+Route (-1.93, 1.08, 53.50) is higher priority than Route (3.03, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.26) Right Route (-93.75, 1.50, 55.56)
+Route (-93.75, 1.50, 51.26) is higher priority than Route (-93.75, 1.50, 55.56) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.26)
+
+
+Comparing Left Route (-89.67, 1.50, 29.75) Forward Route (-93.75, 1.08, 25.00)
+Route (-93.75, 1.08, 25.00) is higher priority than Route (-89.67, 1.50, 29.75) because the first route is more straight than the second
+The highest priority Route is (-93.75, 1.08, 25.00)
+
+
+Comparing Left Route (-89.67, 1.50, 5.50) Forward Route (-93.75, 1.08, 0.76)
+Route (-93.75, 1.08, 0.76) is higher priority than Route (-89.67, 1.50, 5.50) because the first route is more straight than the second
+The highest priority Route is (-93.75, 1.08, 0.76)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.53) Forward Route (-1.89, 1.08, 53.50)
+Route (-1.89, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.53) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.27) Right Route (-93.75, 1.50, 55.54)
+Route (-93.75, 1.50, 51.27) is higher priority than Route (-93.75, 1.50, 55.54) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.27)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.57) Forward Route (-1.93, 1.08, 53.50)
+Route (-1.93, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.98) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.81, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.56) Forward Route (-1.92, 1.08, 53.50)
+Route (-1.92, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.92, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.42) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.42) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.27) Right Route (-93.75, 1.50, 55.55)
+Route (-93.75, 1.50, 51.27) is higher priority than Route (-93.75, 1.50, 55.55) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.27)
+
+
+Comparing Left Route (-89.67, 1.50, 29.79) Forward Route (-93.75, 1.08, 25.07)
+Route (-93.75, 1.08, 25.07) is higher priority than Route (-89.67, 1.50, 29.79) because the first route is more straight than the second
+The highest priority Route is (-93.75, 1.08, 25.07)
+
+
+Comparing Left Route (-9.34, 1.50, -60.84) Forward Route (0.09, 0.74, -51.71)
+Route (0.09, 0.74, -51.71) is higher priority than Route (-9.34, 1.50, -60.84) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.71)
+
+
+Comparing Right Route (9.01, 1.50, -16.01) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.01, 1.50, -16.01) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Left Route (-9.33, 1.50, -60.84) Forward Route (0.09, 0.74, -51.70)
+Route (0.09, 0.74, -51.70) is higher priority than Route (-9.33, 1.50, -60.84) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.70)
+
+
+Comparing Right Route (9.03, 1.50, -16.01) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.03, 1.50, -16.01) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (20.81, 0.91, 18.45) is higher priority than Route (24.81, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.45)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.57) Forward Route (-1.93, 1.08, 53.50)
+Route (-1.93, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.57) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.24) Right Route (-93.75, 1.50, 55.58)
+Route (-93.75, 1.50, 51.24) is higher priority than Route (-93.75, 1.50, 55.58) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.24)
+
+
+Comparing Left Route (-9.33, 1.50, -60.85) Forward Route (0.09, 0.74, -51.72)
+Route (0.09, 0.74, -51.72) is higher priority than Route (-9.33, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.72)
+
+
+Comparing Right Route (9.16, 1.50, -15.91) Forward Route (0.21, 0.57, -1.82)
+Route (0.21, 0.57, -1.82) is higher priority than Route (9.16, 1.50, -15.91) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.82)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Left Route (-9.33, 1.50, -60.84) Forward Route (0.09, 0.74, -51.71)
+Route (0.09, 0.74, -51.71) is higher priority than Route (-9.33, 1.50, -60.84) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.71)
+
+
+Comparing Left Route (-9.33, 1.50, -60.85) Forward Route (0.09, 0.74, -51.72)
+Route (0.09, 0.74, -51.72) is higher priority than Route (-9.33, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.72)
+
+
+Comparing Right Route (9.01, 1.50, -16.02) Forward Route (0.21, 0.57, -2.00)
+Route (0.21, 0.57, -2.00) is higher priority than Route (9.01, 1.50, -16.02) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -2.00)
+
+
+Comparing Right Route (24.79, 1.50, 13.74) Forward Route (20.81, 0.91, 18.49)
+Route (20.81, 0.91, 18.49) is higher priority than Route (24.79, 1.50, 13.74) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.49)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.69)
+Route (20.97, 1.08, 47.69) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.69)
+
+
+Comparing Left Route (18.75, 1.50, 53.50) Right Route (22.96, 1.50, 53.50)
+Route (18.75, 1.50, 53.50) is higher priority than Route (22.96, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.75, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.54) Forward Route (-1.90, 1.08, 53.50)
+Route (-1.90, 1.08, 53.50) is higher priority than Route (3.05, 1.50, 57.54) because the first route is the only route with a window
+The highest priority Route is (-1.90, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.00, 1.08, 53.50)
+Route (-25.00, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.50)
+
+
+Comparing Left Route (-93.75, 1.50, 51.37) Right Route (-93.75, 1.50, 55.54)
+Route (-93.75, 1.50, 51.37) is higher priority than Route (-93.75, 1.50, 55.54) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 51.37)
+
+
+Comparing Left Route (-89.61, 1.50, 29.76) Forward Route (-93.77, 1.08, 25.01)
+Route (-93.77, 1.08, 25.01) is higher priority than Route (-89.61, 1.50, 29.76) because the first route is more straight than the second
+The highest priority Route is (-93.77, 1.08, 25.01)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.75, 1.50, 42.99) Forward Route (20.97, 1.08, 47.77)
+Route (20.97, 1.08, 47.77) is higher priority than Route (24.75, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.77)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (22.98, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (22.98, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.58) Forward Route (-1.87, 1.08, 53.50)
+Route (-1.87, 1.08, 53.50) is higher priority than Route (3.07, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.87, 1.08, 53.50)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.79, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.70)
+Route (20.97, 1.08, 47.70) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.70)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.74)
+Route (20.97, 1.08, 47.74) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.74)
+
+
+Comparing Left Route (18.74, 1.50, 53.50) Right Route (23.04, 1.50, 53.50)
+Route (18.74, 1.50, 53.50) is higher priority than Route (23.04, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.74, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.53) Forward Route (-1.89, 1.08, 53.50)
+Route (-1.89, 1.08, 53.50) is higher priority than Route (3.06, 1.50, 57.53) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (20.81, 0.91, 18.50) is higher priority than Route (24.79, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.50)
+
+
+Comparing Right Route (24.75, 1.50, 42.96) Forward Route (20.97, 1.08, 47.69)
+Route (20.97, 1.08, 47.69) is higher priority than Route (24.75, 1.50, 42.96) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.69)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (20.81, 0.91, 18.45) is higher priority than Route (24.81, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.45)
+
+
+Comparing Right Route (24.75, 1.50, 42.98) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (-9.35, 1.50, -60.83) Forward Route (0.09, 0.74, -51.68)
+Route (0.09, 0.74, -51.68) is higher priority than Route (-9.35, 1.50, -60.83) because the second route has a fire and the first does not
+The highest priority Route is (0.09, 0.74, -51.68)
+
+
+Comparing Right Route (9.06, 1.50, -15.91) Forward Route (0.21, 0.57, -1.82)
+Route (0.21, 0.57, -1.82) is higher priority than Route (9.06, 1.50, -15.91) because the first route is more straight than the second
+The highest priority Route is (0.21, 0.57, -1.82)
+
+
+Comparing Left Route (-9.32, 1.50, -60.85) Forward Route (0.10, 0.74, -51.73)
+Route (0.10, 0.74, -51.73) is higher priority than Route (-9.32, 1.50, -60.85) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.73)
+
+
+Comparing Left Route (-9.33, 1.50, -60.84) Forward Route (0.10, 0.74, -51.72)
+Route (0.10, 0.74, -51.72) is higher priority than Route (-9.33, 1.50, -60.84) because the second route has a fire and the first does not
+The highest priority Route is (0.10, 0.74, -51.72)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (20.81, 0.91, 18.45) is higher priority than Route (24.81, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.45)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (20.97, 1.08, 47.75)
+Route (20.97, 1.08, 47.75) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.75)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (23.05, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (23.05, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.56) Forward Route (-1.92, 1.08, 53.50)
+Route (-1.92, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.92, 1.08, 53.50)
+
+
+Comparing Left Route (-20.88, 1.50, 49.43) Forward Route (-25.01, 1.08, 53.50)
+Route (-25.01, 1.08, 53.50) is higher priority than Route (-20.88, 1.50, 49.43) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 42.95) Forward Route (20.97, 1.08, 47.73)
+Route (20.97, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.73)
+
+
+Comparing Left Route (18.35, 1.50, 53.50) Right Route (22.52, 1.50, 53.50)
+Route (18.35, 1.50, 53.50) is higher priority than Route (22.52, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.35, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.63) Forward Route (-1.87, 1.08, 53.65)
+Route (-1.87, 1.08, 53.65) is higher priority than Route (3.06, 1.50, 57.63) because the first route is the only route with a window
+The highest priority Route is (-1.87, 1.08, 53.65)
+
+
+Comparing Left Route (-20.87, 1.50, 49.41) Forward Route (-24.98, 1.08, 53.88)
+Route (-24.98, 1.08, 53.88) is higher priority than Route (-20.87, 1.50, 49.41) because the first route is the only route with a window
+The highest priority Route is (-24.98, 1.08, 53.88)
+
+
+Comparing Left Route (-93.75, 1.50, 50.72) Right Route (-93.75, 1.50, 55.54)
+Route (-93.75, 1.50, 50.72) is higher priority than Route (-93.75, 1.50, 55.54) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 50.72)
+
+
+Comparing Right Route (24.79, 1.50, 13.73) Forward Route (20.93, 0.90, 18.46)
+Route (20.93, 0.90, 18.46) is higher priority than Route (24.79, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.46)
+
+
+Comparing Right Route (24.75, 1.50, 42.95) Forward Route (21.23, 1.08, 47.73)
+Route (21.23, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.95) because the first route is more straight than the second
+The highest priority Route is (21.23, 1.08, 47.73)
+
+
+Comparing Left Route (18.53, 1.50, 53.50) Right Route (22.59, 1.50, 53.50)
+Route (18.53, 1.50, 53.50) is higher priority than Route (22.59, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.53, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.62) Forward Route (-1.94, 1.08, 53.65)
+Route (-1.94, 1.08, 53.65) is higher priority than Route (3.03, 1.50, 57.62) because the first route is the only route with a window
+The highest priority Route is (-1.94, 1.08, 53.65)
+
+
+Comparing Left Route (-20.82, 1.50, 25.15) Forward Route (-25.01, 1.08, 53.88)
+Route (-25.01, 1.08, 53.88) is higher priority than Route (-20.82, 1.50, 25.15) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.88)
+
+
+Comparing Left Route (-93.75, 1.50, 50.62) Right Route (-93.75, 1.50, 55.39)
+Route (-93.75, 1.50, 50.62) is higher priority than Route (-93.75, 1.50, 55.39) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 50.62)
+
+
+Comparing Right Route (24.78, 1.50, 13.72) Forward Route (20.94, 0.90, 18.44)
+Route (20.94, 0.90, 18.44) is higher priority than Route (24.78, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.94, 0.90, 18.44)
+
+
+Comparing Right Route (24.93, 1.50, 42.97) Forward Route (21.25, 1.08, 47.70)
+Route (21.25, 1.08, 47.70) is higher priority than Route (24.93, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (21.25, 1.08, 47.70)
+
+
+Comparing Left Route (18.55, 1.50, 53.50) Right Route (22.55, 1.50, 53.50)
+Route (18.55, 1.50, 53.50) is higher priority than Route (22.55, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.55, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.60) Forward Route (-1.89, 1.08, 53.65)
+Route (-1.89, 1.08, 53.65) is higher priority than Route (3.05, 1.50, 57.60) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.65)
+
+
+Comparing Left Route (-20.81, 1.50, 25.16) Forward Route (-25.01, 1.08, 53.89)
+Route (-25.01, 1.08, 53.89) is higher priority than Route (-20.81, 1.50, 25.16) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.89)
+
+
+Comparing Left Route (-93.75, 1.50, 50.82) Right Route (-93.75, 1.50, 55.49)
+Route (-93.75, 1.50, 50.82) is higher priority than Route (-93.75, 1.50, 55.49) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 50.82)
+
+
+Comparing Right Route (41.50, 1.50, 13.43) Forward Route (27.31, 1.08, 13.80)
+Route (27.31, 1.08, 13.80) is higher priority than Route (41.50, 1.50, 13.43) because the first route is more straight than the second
+The highest priority Route is (27.31, 1.08, 13.80)
+
+
+Comparing Right Route (24.76, 1.50, 13.74) Forward Route (20.93, 0.90, 18.49)
+Route (20.93, 0.90, 18.49) is higher priority than Route (24.76, 1.50, 13.74) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.49)
+
+
+Comparing Right Route (24.75, 1.50, 13.69) Forward Route (20.81, 0.90, 18.49)
+Route (20.81, 0.90, 18.49) is higher priority than Route (24.75, 1.50, 13.69) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.90, 18.49)
+
+
+Comparing Right Route (24.75, 1.50, 42.99) Forward Route (20.97, 1.08, 47.76)
+Route (20.97, 1.08, 47.76) is higher priority than Route (24.75, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (20.97, 1.08, 47.76)
+
+
+Comparing Left Route (18.73, 1.50, 53.50) Right Route (22.97, 1.50, 53.50)
+Route (18.73, 1.50, 53.50) is higher priority than Route (22.97, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.73, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.56) Forward Route (-1.92, 1.08, 53.50)
+Route (-1.92, 1.08, 53.50) is higher priority than Route (3.04, 1.50, 57.56) because the first route is the only route with a window
+The highest priority Route is (-1.92, 1.08, 53.50)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (41.45, 1.50, 13.53) Forward Route (27.32, 1.08, 13.82)
+Route (27.32, 1.08, 13.82) is higher priority than Route (41.45, 1.50, 13.53) because the first route is more straight than the second
+The highest priority Route is (27.32, 1.08, 13.82)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+
+Comparing Right Route (24.75, 1.50, 13.73) Forward Route (20.93, 0.90, 18.48)
+Route (20.93, 0.90, 18.48) is higher priority than Route (24.75, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.48)
+
+
+Comparing Right Route (24.83, 1.50, 42.99) Forward Route (21.24, 1.08, 47.76)
+Route (21.24, 1.08, 47.76) is higher priority than Route (24.83, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.76)
+
+
+Comparing Left Route (18.43, 1.50, 53.50) Right Route (22.56, 1.50, 53.50)
+Route (18.43, 1.50, 53.50) is higher priority than Route (22.56, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.43, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.60) Forward Route (-1.88, 1.08, 53.66)
+Route (-1.88, 1.08, 53.66) is higher priority than Route (3.06, 1.50, 57.60) because the first route is the only route with a window
+The highest priority Route is (-1.88, 1.08, 53.66)
+
+
+Comparing Right Route (24.75, 1.50, 13.71) Forward Route (20.93, 0.90, 18.49)
+Route (20.93, 0.90, 18.49) is higher priority than Route (24.75, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.49)
+
+
+Comparing Right Route (24.82, 1.50, 42.98) Forward Route (21.24, 1.08, 47.73)
+Route (21.24, 1.08, 47.73) is higher priority than Route (24.82, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.73)
+
+
+Comparing Left Route (18.08, 1.50, 53.50) Right Route (22.80, 1.50, 53.50)
+Route (18.08, 1.50, 53.50) is higher priority than Route (22.80, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.08, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.61) Forward Route (-1.93, 1.08, 53.64)
+Route (-1.93, 1.08, 53.64) is higher priority than Route (3.03, 1.50, 57.61) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.64)
+
+
+Comparing Left Route (-20.88, 1.50, 49.46) Forward Route (-25.01, 1.08, 53.87)
+Route (-25.01, 1.08, 53.87) is higher priority than Route (-20.88, 1.50, 49.46) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.87)
+
+
+Comparing Right Route (24.76, 1.50, 13.74) Forward Route (20.93, 0.90, 18.50)
+Route (20.93, 0.90, 18.50) is higher priority than Route (24.76, 1.50, 13.74) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.50)
+
+
+Comparing Right Route (24.92, 1.50, 42.98) Forward Route (21.24, 1.08, 47.74)
+Route (21.24, 1.08, 47.74) is higher priority than Route (24.92, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.74)
+
+
+Comparing Left Route (18.14, 1.50, 53.50) Right Route (22.73, 1.50, 53.50)
+Route (18.14, 1.50, 53.50) is higher priority than Route (22.73, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.14, 1.50, 53.50)
+
+
+Comparing Right Route (3.03, 1.50, 57.60) Forward Route (-1.94, 1.08, 53.65)
+Route (-1.94, 1.08, 53.65) is higher priority than Route (3.03, 1.50, 57.60) because the first route is the only route with a window
+The highest priority Route is (-1.94, 1.08, 53.65)
+
+
+Comparing Left Route (-20.84, 1.50, 37.28) Forward Route (-24.99, 1.08, 53.88)
+Route (-24.99, 1.08, 53.88) is higher priority than Route (-20.84, 1.50, 37.28) because the first route is the only route with a window
+The highest priority Route is (-24.99, 1.08, 53.88)
+
+
+Comparing Left Route (-93.75, 1.50, 50.47) Right Route (-93.75, 1.50, 55.45)
+Route (-93.75, 1.50, 50.47) is higher priority than Route (-93.75, 1.50, 55.45) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 50.47)
+
+
+Comparing Left Route (-89.67, 1.50, 29.78) Forward Route (-93.97, 1.08, 25.05)
+Route (-93.97, 1.08, 25.05) is higher priority than Route (-89.67, 1.50, 29.78) because the first route is more straight than the second
+The highest priority Route is (-93.97, 1.08, 25.05)
+
+
+Comparing Left Route (-89.66, 1.50, 5.53) Forward Route (-94.07, 1.08, 0.82)
+Route (-94.07, 1.08, 0.82) is higher priority than Route (-89.66, 1.50, 5.53) because the first route is more straight than the second
+The highest priority Route is (-94.07, 1.08, 0.82)
+
+
+Comparing Left Route (-20.59, 1.50, -0.93) Forward Route (-16.75, 1.08, -5.23)
+Route (-16.75, 1.08, -5.23) is higher priority than Route (-20.59, 1.50, -0.93) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -5.23)
+
+
+Comparing Right Route (24.75, 1.50, 13.73) Forward Route (20.95, 0.90, 18.50)
+Route (20.95, 0.90, 18.50) is higher priority than Route (24.75, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.95, 0.90, 18.50)
+
+
+Comparing Right Route (24.75, 1.50, 42.97) Forward Route (21.25, 1.08, 47.73)
+Route (21.25, 1.08, 47.73) is higher priority than Route (24.75, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (21.25, 1.08, 47.73)
+
+
+Comparing Left Route (18.54, 1.50, 53.50) Right Route (22.62, 1.50, 53.50)
+Route (18.54, 1.50, 53.50) is higher priority than Route (22.62, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.54, 1.50, 53.50)
+
+
+Comparing Right Route (3.07, 1.50, 57.62) Forward Route (-1.86, 1.08, 53.65)
+Route (-1.86, 1.08, 53.65) is higher priority than Route (3.07, 1.50, 57.62) because the first route is the only route with a window
+The highest priority Route is (-1.86, 1.08, 53.65)
+
+
+Comparing Left Route (-20.84, 1.50, 25.15) Forward Route (-25.01, 1.08, 53.87)
+Route (-25.01, 1.08, 53.87) is higher priority than Route (-20.84, 1.50, 25.15) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.87)
+
+
+Comparing Left Route (-93.75, 1.50, 50.51) Right Route (-93.75, 1.50, 55.48)
+Route (-93.75, 1.50, 50.51) is higher priority than Route (-93.75, 1.50, 55.48) because the second route has a fire and the first does not
+The highest priority Route is (-93.75, 1.50, 50.51)
+
+
+Comparing Left Route (-89.63, 1.50, 29.78) Forward Route (-93.98, 1.08, 25.06)
+Route (-93.98, 1.08, 25.06) is higher priority than Route (-89.63, 1.50, 29.78) because the first route is more straight than the second
+The highest priority Route is (-93.98, 1.08, 25.06)
+
+
+Comparing Left Route (-89.65, 1.50, 5.52) Forward Route (-94.05, 1.08, 0.79)
+Route (-94.05, 1.08, 0.79) is higher priority than Route (-89.65, 1.50, 5.52) because the first route is more straight than the second
+The highest priority Route is (-94.05, 1.08, 0.79)
+
+
+Comparing Left Route (-20.60, 1.50, -0.90) Forward Route (-16.75, 1.08, -5.23)
+Route (-16.75, 1.08, -5.23) is higher priority than Route (-20.60, 1.50, -0.90) because is the only route with an exit
+The highest priority Route is (-16.75, 1.08, -5.23)
+
+
+Comparing Right Route (24.75, 1.50, 13.73) Forward Route (20.94, 0.90, 18.49)
+Route (20.94, 0.90, 18.49) is higher priority than Route (24.75, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.94, 0.90, 18.49)
+
+
+Comparing Right Route (24.85, 1.50, 42.99) Forward Route (21.24, 1.08, 47.74)
+Route (21.24, 1.08, 47.74) is higher priority than Route (24.85, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.74)
+
+
+Comparing Left Route (18.13, 1.50, 53.50) Right Route (22.75, 1.50, 53.50)
+Route (18.13, 1.50, 53.50) is higher priority than Route (22.75, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.13, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.58) Forward Route (-1.91, 1.08, 53.65)
+Route (-1.91, 1.08, 53.65) is higher priority than Route (3.05, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.91, 1.08, 53.65)
+
+
+Comparing Left Route (-20.79, 1.50, 25.20) Forward Route (-24.99, 1.08, 53.86)
+Route (-24.99, 1.08, 53.86) is higher priority than Route (-20.79, 1.50, 25.20) because the first route is the only route with a window
+The highest priority Route is (-24.99, 1.08, 53.86)
+
+
+Comparing Right Route (24.78, 1.50, 13.75) Forward Route (20.94, 0.90, 18.50)
+Route (20.94, 0.90, 18.50) is higher priority than Route (24.78, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.94, 0.90, 18.50)
+
+
+Comparing Right Route (24.85, 1.50, 42.98) Forward Route (21.26, 1.08, 47.73)
+Route (21.26, 1.08, 47.73) is higher priority than Route (24.85, 1.50, 42.98) because the first route is more straight than the second
+The highest priority Route is (21.26, 1.08, 47.73)
+
+
+Comparing Left Route (18.56, 1.50, 53.50) Right Route (22.63, 1.50, 53.50)
+Route (18.56, 1.50, 53.50) is higher priority than Route (22.63, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.56, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.64) Forward Route (-1.93, 1.08, 53.67)
+Route (-1.93, 1.08, 53.67) is higher priority than Route (3.04, 1.50, 57.64) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.67)
+
+
+Comparing Left Route (-20.85, 1.50, 37.29) Forward Route (-25.01, 1.08, 53.89)
+Route (-25.01, 1.08, 53.89) is higher priority than Route (-20.85, 1.50, 37.29) because the first route is the only route with a window
+The highest priority Route is (-25.01, 1.08, 53.89)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.94, 0.90, 18.50)
+Route (20.94, 0.90, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.94, 0.90, 18.50)
+
+
+Comparing Right Route (41.50, 1.50, 42.59) Forward Route (27.22, 1.08, 42.95)
+Route (27.22, 1.08, 42.95) is higher priority than Route (41.50, 1.50, 42.59) because the first route is more straight than the second
+The highest priority Route is (27.22, 1.08, 42.95)
+
+
+Comparing Right Route (24.87, 1.50, 13.73) Forward Route (20.93, 0.90, 18.46)
+Route (20.93, 0.90, 18.46) is higher priority than Route (24.87, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.46)
+
+
+Comparing Right Route (24.80, 1.50, 42.99) Forward Route (21.24, 1.08, 47.75)
+Route (21.24, 1.08, 47.75) is higher priority than Route (24.80, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.75)
+
+
+Comparing Left Route (18.54, 1.50, 53.50) Right Route (22.68, 1.50, 53.50)
+Route (18.54, 1.50, 53.50) is higher priority than Route (22.68, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.54, 1.50, 53.50)
+
+
+Comparing Right Route (3.05, 1.50, 57.60) Forward Route (-1.89, 1.08, 53.65)
+Route (-1.89, 1.08, 53.65) is higher priority than Route (3.05, 1.50, 57.60) because the first route is the only route with a window
+The highest priority Route is (-1.89, 1.08, 53.65)
+
+
+Comparing Left Route (-20.85, 1.50, 37.28) Forward Route (-25.00, 1.08, 53.88)
+Route (-25.00, 1.08, 53.88) is higher priority than Route (-20.85, 1.50, 37.28) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.88)
+
+
+Comparing Left Route (-16.68, 1.50, 29.77) Right Route (-24.75, 1.50, 5.69) Forward Route (-20.23, 1.08, 25.01)
+Route (-20.23, 1.08, 25.01) is higher priority than Route (-16.68, 1.50, 29.77) because is the only route with an exit
+Route (-20.23, 1.08, 25.01) is higher priority than Route (-24.75, 1.50, 5.69) because is the only route with an exit
+Route (-24.75, 1.50, 5.69) is higher priority than Route (-16.68, 1.50, 29.77) because it was a random decision
+The highest priority Route is (-20.23, 1.08, 25.01)
+
+
+Comparing Right Route (24.78, 1.50, 13.71) Forward Route (20.93, 0.90, 18.43)
+Route (20.93, 0.90, 18.43) is higher priority than Route (24.78, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.43)
+
+
+Comparing Right Route (24.93, 1.50, 42.99) Forward Route (21.24, 1.08, 47.75)
+Route (21.24, 1.08, 47.75) is higher priority than Route (24.93, 1.50, 42.99) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.75)
+
+
+Comparing Left Route (18.12, 1.50, 53.50) Right Route (22.74, 1.50, 53.50)
+Route (18.12, 1.50, 53.50) is higher priority than Route (22.74, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.12, 1.50, 53.50)
+
+
+Comparing Right Route (3.04, 1.50, 57.58) Forward Route (-1.93, 1.08, 53.65)
+Route (-1.93, 1.08, 53.65) is higher priority than Route (3.04, 1.50, 57.58) because the first route is the only route with a window
+The highest priority Route is (-1.93, 1.08, 53.65)
+
+
+Comparing Left Route (-20.81, 1.50, 25.15) Forward Route (-25.00, 1.08, 53.87)
+Route (-25.00, 1.08, 53.87) is higher priority than Route (-20.81, 1.50, 25.15) because the first route is the only route with a window
+The highest priority Route is (-25.00, 1.08, 53.87)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.93, 0.90, 18.50)
+Route (20.93, 0.90, 18.50) is higher priority than Route (24.80, 1.50, 13.75) because the first route is more straight than the second
+The highest priority Route is (20.93, 0.90, 18.50)
+
+
+Comparing Right Route (24.83, 1.50, 42.97) Forward Route (21.24, 1.08, 47.72)
+Route (21.24, 1.08, 47.72) is higher priority than Route (24.83, 1.50, 42.97) because the first route is more straight than the second
+The highest priority Route is (21.24, 1.08, 47.72)
+
+
+Comparing Left Route (18.53, 1.50, 53.50) Right Route (22.61, 1.50, 53.50)
+Route (18.53, 1.50, 53.50) is higher priority than Route (22.61, 1.50, 53.50) because the first route is the only route with a window
+The highest priority Route is (18.53, 1.50, 53.50)
+
+
+Comparing Right Route (3.06, 1.50, 57.62) Forward Route (-1.88, 1.08, 53.65)
+Route (-1.88, 1.08, 53.65) is higher priority than Route (3.06, 1.50, 57.62) because the first route is the only route with a window
+The highest priority Route is (-1.88, 1.08, 53.65)
+
+
+Comparing Left Route (-20.85, 1.50, 49.39) Forward Route (-24.96, 1.08, 53.87)
+Route (-24.96, 1.08, 53.87) is higher priority than Route (-20.85, 1.50, 49.39) because the first route is the only route with a window
+The highest priority Route is (-24.96, 1.08, 53.87)
+
+
+Comparing Left Route (-17.76, 1.50, -5.00) Right Route (-22.62, 1.50, -5.00)
+Route (-17.76, 1.50, -5.00) is higher priority than Route (-22.62, 1.50, -5.00) because it was a random decision
+The highest priority Route is (-17.76, 1.50, -5.00)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (24.80, 1.50, 13.71) is higher priority than Route (20.81, 0.91, 18.43) because the second route has a fire and the first does not
+The highest priority Route is (24.80, 1.50, 13.71)
+
+
+Comparing Right Route (24.75, 1.50, 13.68) Forward Route (20.81, 0.90, 18.44)
+Route (24.75, 1.50, 13.68) is higher priority than Route (20.81, 0.90, 18.44) because the second route has a fire and the first does not
+The highest priority Route is (24.75, 1.50, 13.68)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (24.79, 1.50, 13.75) is higher priority than Route (20.81, 0.91, 18.50) because the second route has a fire and the first does not
+The highest priority Route is (24.79, 1.50, 13.75)
+
+
+Comparing Right Route (24.80, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (24.80, 1.50, 13.75) is higher priority than Route (20.81, 0.91, 18.50) because the second route has a fire and the first does not
+The highest priority Route is (24.80, 1.50, 13.75)
+
+
+Comparing Right Route (24.81, 1.50, 13.72) Forward Route (20.81, 0.91, 18.45)
+Route (24.81, 1.50, 13.72) is higher priority than Route (20.81, 0.91, 18.45) because the second route has a fire and the first does not
+The highest priority Route is (24.81, 1.50, 13.72)
+
+
+Comparing Right Route (24.79, 1.50, 13.75) Forward Route (20.81, 0.91, 18.50)
+Route (24.79, 1.50, 13.75) is higher priority than Route (20.81, 0.91, 18.50) because the second route has a fire and the first does not
+The highest priority Route is (24.79, 1.50, 13.75)
+
+
+Comparing Right Route (24.80, 1.50, 13.72) Forward Route (20.81, 0.91, 18.44)
+Route (20.81, 0.91, 18.44) is higher priority than Route (24.80, 1.50, 13.72) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.44)
+
+
+Comparing Right Route (24.83, 1.50, 13.73) Forward Route (20.81, 0.91, 18.47)
+Route (20.81, 0.91, 18.47) is higher priority than Route (24.83, 1.50, 13.73) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.47)
+
+
+Comparing Right Route (24.80, 1.50, 13.71) Forward Route (20.81, 0.91, 18.43)
+Route (20.81, 0.91, 18.43) is higher priority than Route (24.80, 1.50, 13.71) because the first route is more straight than the second
+The highest priority Route is (20.81, 0.91, 18.43)
+
+

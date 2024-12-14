@@ -19,12 +19,17 @@ public class FieldOfView : MonoBehaviour
     public float edgeDstThreshold;
 
     public MeshFilter viewMeshFilter;
+    public MeshCollider meshCollider;
     private Mesh viewMesh;
 
     void Start(){
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
+        if (meshCollider != null)
+        {
+            meshCollider.sharedMesh = viewMesh;
+        }
         StartCoroutine("FindTargetsWithDelay",.2f);
     }
 
